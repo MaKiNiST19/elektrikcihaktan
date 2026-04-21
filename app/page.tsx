@@ -119,11 +119,13 @@ export default function Home() {
                 href={`/hizmetler/${h.slug}`}
                 className="shadow-3d group border border-line hover:border-accent transition-colors overflow-hidden"
               >
-                <img
-                  src={imageMap[h.slug] || imageMap.default}
-                  alt={h.title}
-                  className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+                <div className="w-full h-56 bg-surface flex items-center justify-center overflow-hidden">
+                  <img
+                    src={imageMap[h.slug] || imageMap.default}
+                    alt={h.title}
+                    className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
                 <div className="p-6">
                   <h3 className="text-lg mb-2 group-hover:text-accent transition-colors">
                     {h.title}

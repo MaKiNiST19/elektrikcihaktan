@@ -482,7 +482,7 @@ export function HomeSeoBlock() {
                     <tr>
                       <th className="text-left p-2">İş</th>
                       <th className="text-left p-2">Tipik Süre</th>
-                      <th className="text-left p-2">Fiyat Aralığı</th>
+                      <th className="text-left p-2">Ortalama Fiyat</th>
                     </tr>
                   </thead>
                   <tbody className="bg-white">
@@ -494,7 +494,7 @@ export function HomeSeoBlock() {
                           </Link>
                         </td>
                         <td className="p-2">~{h.durationMinutes} dk</td>
-                        <td className="p-2 font-semibold">{h.priceRange}</td>
+                        <td className="p-2 font-semibold">~{h.priceRange}</td>
                       </tr>
                     ))}
                   </tbody>

@@ -32,18 +32,18 @@ export default function Page() {
             href={`/hizmetler/${h.slug}`}
             className="shadow-3d group border border-line hover:border-accent transition-colors overflow-hidden"
           >
-            <div className="w-full h-56 bg-surface flex items-center justify-center overflow-hidden">
+            <div className="w-full h-40 bg-surface overflow-hidden">
               <img
                 src={imageMap[h.slug] || imageMap.default}
                 alt={h.title}
-                className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div className="p-6">
               <h2 className="text-lg mb-2 group-hover:text-accent transition-colors">{h.title}</h2>
               <p className="text-sm text-ink/80">{h.summary}</p>
               <p className="text-xs text-ink/60 mt-3">
-                <strong>Fiyat:</strong> {h.priceRange}
+                <strong>Ortalama:</strong> ~{h.priceRange} <span className="text-ink/50">(iş kapsamına göre)</span>
               </p>
             </div>
           </Link>

@@ -1,0 +1,24 @@
+{
+  "name": "Elektrikçi Haktan - İzmir 7/24 Acil Elektrikçi",
+  "short_name": "Elektrikçi Haktan",
+  "description": "İzmir'de 7/24 acil elektrikçi. Sigorta, tesisat, topraklama, kombi-klima montajı.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1d2736",
+  "lang": "tr-TR",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

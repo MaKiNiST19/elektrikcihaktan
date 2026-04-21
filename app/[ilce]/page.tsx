@@ -118,7 +118,7 @@ export default async function Page({ params }: { params: Promise<{ ilce: string 
                   {i.name} {h.shortTitle}
                 </h3>
                 <p className="text-sm text-ink/70">{h.summary}</p>
-                <p className="text-xs text-ink/50 mt-2">{h.priceRange}</p>
+                <p className="text-xs text-ink/50 mt-2">Ortalama ~{h.priceRange}</p>
               </Link>
             ))}
           </div>

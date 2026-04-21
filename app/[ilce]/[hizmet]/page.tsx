@@ -111,8 +111,9 @@ export default async function Page({
 
         <div className="grid sm:grid-cols-4 gap-3 mb-8">
           <div className="shadow-3d bg-surface p-4">
-            <p className="text-xs uppercase text-ink/60">Fiyat Aralığı</p>
-            <p className="font-bold text-primary">{h.priceRange}</p>
+            <p className="text-xs uppercase text-ink/60">Ortalama Fiyat</p>
+            <p className="font-bold text-primary">~{h.priceRange}</p>
+            <p className="text-[10px] text-ink/50 mt-1">Değişkenlik gösterebilir</p>
           </div>
           <div className="shadow-3d bg-surface p-4">
             <p className="text-xs uppercase text-ink/60">Varış Süresi</p>

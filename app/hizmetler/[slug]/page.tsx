@@ -99,8 +99,9 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
         <div className="grid sm:grid-cols-4 gap-3 my-8">
           <div className="shadow-3d bg-surface p-4">
-            <p className="text-xs uppercase text-ink/60">Fiyat</p>
-            <p className="font-bold text-primary">{h.priceRange}</p>
+            <p className="text-xs uppercase text-ink/60">Ortalama Fiyat</p>
+            <p className="font-bold text-primary">~{h.priceRange}</p>
+            <p className="text-[10px] text-ink/50 mt-1">İş kapsamına göre değişir</p>
           </div>
           <div className="shadow-3d bg-surface p-4">
             <p className="text-xs uppercase text-ink/60">Süre</p>

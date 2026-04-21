@@ -151,7 +151,7 @@ export default function Home() {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-primary/85"></div>
+        <div className="absolute inset-0 bg-primary/55"></div>
         <div className="relative container-x py-16 md:py-24">
           <div className="max-w-2xl">
             <p className="text-shine font-semibold mb-3 uppercase tracking-wider text-sm">
@@ -202,11 +202,11 @@ export default function Home() {
                 href={`/hizmetler/${h.slug}`}
                 className="shadow-3d group border border-line hover:border-accent transition-colors overflow-hidden"
               >
-                <div className="w-full h-56 bg-surface flex items-center justify-center overflow-hidden">
+                <div className="w-full h-40 bg-surface overflow-hidden">
                   <img
                     src={imageMap[h.slug] || imageMap.default}
                     alt={h.title}
-                    className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
@@ -295,6 +295,102 @@ export default function Home() {
                 <p className="mt-3 text-ink/80 text-sm">{f.a}</p>
               </details>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20 bg-primary text-white">
+        <div className="container-x">
+          <header className="text-center mb-12">
+            <p className="text-accent font-semibold uppercase text-sm tracking-wider mb-2">
+              Neden Bize Güveniyorlar?
+            </p>
+            <h2 className="text-3xl md:text-4xl text-white">
+              Rakamlarla Elektrikçi Volkan Haktan
+            </h2>
+          </header>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+            <div className="text-center shadow-3d bg-white/10 backdrop-blur-md border border-white/20 p-6">
+              <p className="text-4xl md:text-5xl font-bold text-accent mb-2">20+</p>
+              <p className="text-sm text-white/80 uppercase tracking-wide">Yıllık Deneyim</p>
+            </div>
+            <div className="text-center shadow-3d bg-white/10 backdrop-blur-md border border-white/20 p-6">
+              <p className="text-4xl md:text-5xl font-bold text-accent mb-2">15dk</p>
+              <p className="text-sm text-white/80 uppercase tracking-wide">Ortalama Varış</p>
+            </div>
+            <div className="text-center shadow-3d bg-white/10 backdrop-blur-md border border-white/20 p-6">
+              <p className="text-4xl md:text-5xl font-bold text-accent mb-2">7/24</p>
+              <p className="text-sm text-white/80 uppercase tracking-wide">Kesintisiz Hizmet</p>
+            </div>
+            <div className="text-center shadow-3d bg-white/10 backdrop-blur-md border border-white/20 p-6">
+              <p className="text-4xl md:text-5xl font-bold text-accent mb-2">5Yıl</p>
+              <p className="text-sm text-white/80 uppercase tracking-wide">Tesisat Garantisi</p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="shadow-3d bg-white/5 border border-white/20 p-6">
+              <div className="text-accent text-3xl mb-3">✓</div>
+              <h3 className="font-bold text-lg mb-2">Belgeli Teknisyen</h3>
+              <p className="text-sm text-white/80">
+                TEDAŞ standartlarına uygun, resmi belge sahibi elektrik teknisyenleri.
+              </p>
+            </div>
+            <div className="shadow-3d bg-white/5 border border-white/20 p-6">
+              <div className="text-accent text-3xl mb-3">✓</div>
+              <h3 className="font-bold text-lg mb-2">Fatura + Garanti</h3>
+              <p className="text-sm text-white/80">
+                Her işte resmi fatura. İşçilikte 2 yıl, tesisat işlerinde 5 yıl garanti.
+              </p>
+            </div>
+            <div className="shadow-3d bg-white/5 border border-white/20 p-6">
+              <div className="text-accent text-3xl mb-3">✓</div>
+              <h3 className="font-bold text-lg mb-2">Şeffaf Fiyat</h3>
+              <p className="text-sm text-white/80">
+                Ücretsiz keşif. Onay öncesi sabit fiyat. Sürpriz ek ücret yoktur.
+              </p>
+            </div>
+          </div>
+
+          <div className="shadow-3d bg-white text-ink p-8 md:p-10">
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <p className="text-xs uppercase text-accent font-bold tracking-wider mb-2">İşletme Adı</p>
+                <p className="font-bold text-primary text-lg mb-1">{site.name}</p>
+                <p className="text-sm text-ink/70">{site.founderTitle}</p>
+                <p className="text-xs text-ink/60 mt-2">Kuruluş: {site.foundingYear}</p>
+              </div>
+              <div>
+                <p className="text-xs uppercase text-accent font-bold tracking-wider mb-2">Hizmet Bölgesi</p>
+                <p className="font-bold text-primary mb-1">İzmir ve Tüm İlçeleri</p>
+                <p className="text-sm text-ink/70 leading-relaxed">
+                  Konak · Buca · Karabağlar · Bornova · Bayraklı · Gaziemir · Balçova · Karşıyaka · Çiğli · Narlıdere ve 15 ilçe
+                </p>
+              </div>
+              <div>
+                <p className="text-xs uppercase text-accent font-bold tracking-wider mb-2">İletişim</p>
+                <a
+                  href={`tel:${site.phoneTel}`}
+                  className="block font-bold text-primary text-lg mb-1 hover:text-accent transition-colors"
+                >
+                  {site.phone}
+                </a>
+                <a
+                  href={`mailto:${site.email}`}
+                  className="block text-sm text-ink/70 hover:text-accent transition-colors mb-1"
+                >
+                  {site.email}
+                </a>
+                <p className="text-xs text-ink/60 mt-2">7/24 Açık · Gece/Tatil Farkı Yok</p>
+              </div>
+            </div>
+            <div className="border-t border-line mt-6 pt-6 flex flex-wrap gap-2 justify-center">
+              <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded font-semibold">✓ TEDAŞ Standartları</span>
+              <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded font-semibold">✓ TSE Yönetmeliği</span>
+              <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded font-semibold">✓ Topraklama Belgeli</span>
+              <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded font-semibold">✓ İSG Uyumlu</span>
+              <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded font-semibold">✓ Fatura Garanti</span>
+            </div>
           </div>
         </div>
       </section>

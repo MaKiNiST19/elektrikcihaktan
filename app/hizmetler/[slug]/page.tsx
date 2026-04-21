@@ -98,19 +98,19 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <p className="text-lg text-ink/80 leading-relaxed">{h.summary}</p>
 
         <div className="grid sm:grid-cols-4 gap-3 my-8">
-          <div className="bg-surface p-4">
+          <div className="shadow-3d bg-surface p-4">
             <p className="text-xs uppercase text-ink/60">Fiyat</p>
             <p className="font-bold text-primary">{h.priceRange}</p>
           </div>
-          <div className="bg-surface p-4">
+          <div className="shadow-3d bg-surface p-4">
             <p className="text-xs uppercase text-ink/60">Süre</p>
             <p className="font-bold text-primary">~{h.durationMinutes} dk</p>
           </div>
-          <div className="bg-surface p-4">
+          <div className="shadow-3d bg-surface p-4">
             <p className="text-xs uppercase text-ink/60">Müsaitlik</p>
             <p className="font-bold text-primary">7/24</p>
           </div>
-          <div className="bg-surface p-4">
+          <div className="shadow-3d bg-surface p-4">
             <p className="text-xs uppercase text-ink/60">Garanti</p>
             <p className="font-bold text-primary text-sm">{h.warranty.split(",")[0]}</p>
           </div>
@@ -135,7 +135,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           <h2 className="text-2xl mb-4">Hangi Belirtilerde Çağırmalısınız?</h2>
           <ul className="grid sm:grid-cols-2 gap-2 text-ink/80">
             {h.symptoms.map((s) => (
-              <li key={s} className="flex gap-2 border border-line p-3 text-sm">
+              <li key={s} className="shadow-3d flex gap-2 border border-line p-3 text-sm">
                 <span className="text-accent font-bold">⚠</span>{s}
               </li>
             ))}
@@ -154,7 +154,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           <ol className="space-y-4">
             {h.processSteps.map((s, i) => (
               <li key={s.step} className="flex gap-4">
-                <span className="shrink-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold">
+                <span className="shadow-3d shrink-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold">
                   {i + 1}
                 </span>
                 <div>
@@ -167,13 +167,13 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </section>
 
         <div className="grid sm:grid-cols-2 gap-4 my-10">
-          <div className="bg-surface p-5">
+          <div className="shadow-3d bg-surface p-5">
             <h3 className="font-semibold text-primary mb-2">Kullandığımız Malzemeler</h3>
             <ul className="list-disc pl-5 space-y-1 text-sm text-ink/80">
               {h.materials.map((m) => <li key={m}>{m}</li>)}
             </ul>
           </div>
-          <div className="bg-primary text-white p-5">
+          <div className="shadow-3d bg-primary text-white p-5">
             <h3 className="font-semibold mb-2">Garanti</h3>
             <p className="text-sm">{h.warranty}</p>
             <p className="text-sm mt-3 opacity-90">Tüm işlerde resmi fatura düzenlenir.</p>
@@ -184,7 +184,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           <h2 className="text-2xl mb-4">Sık Sorulan Sorular</h2>
           <div className="space-y-3">
             {h.faq.map((f) => (
-              <details key={f.q} className="border border-line p-5">
+              <details key={f.q} className="shadow-3d border border-line p-5">
                 <summary className="cursor-pointer font-semibold text-primary">{f.q}</summary>
                 <p className="mt-3 text-ink/80">{f.a}</p>
               </details>
@@ -192,7 +192,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           </div>
         </section>
 
-        <div className="mt-10 bg-accent text-white p-8 text-center">
+        <div className="shadow-3d mt-10 bg-accent text-white p-8 text-center">
           <p className="mb-3 text-lg">{h.shortTitle} için hemen randevu alın</p>
           <a href={`tel:${site.phoneTel}`} className="btn-phone-lg">
             📞 {site.phone}
@@ -207,7 +207,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
                 const r = getHizmet(rs);
                 if (!r) return null;
                 return (
-                  <Link key={rs} href={`/hizmetler/${r.slug}`} className="border border-line p-4 hover:border-accent">
+                  <Link key={rs} href={`/hizmetler/${r.slug}`} className="shadow-3d border border-line p-4 hover:border-accent">
                     <h3 className="font-semibold text-primary">{r.shortTitle}</h3>
                     <p className="text-sm text-ink/70 mt-1">{r.summary}</p>
                   </Link>
@@ -224,7 +224,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               <Link
                 key={i.slug}
                 href={`/${i.slug}/${h.slug}`}
-                className="border border-line p-3 text-sm hover:border-accent hover:text-accent"
+                className="shadow-3d border border-line p-3 text-sm hover:border-accent hover:text-accent"
               >
                 {i.name} {h.shortTitle}
               </Link>

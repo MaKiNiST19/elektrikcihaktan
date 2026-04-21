@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { ilceler } from "@/data/ilceler";
 import { hizmetler } from "@/data/hizmetler";
 import { site } from "@/lib/site";
@@ -139,7 +139,7 @@ export function HomeSeoBlock() {
     <>
       <JsonLd data={[faqSchema, howToSchema, articleSchema]} />
 
-      <section className="bg-surface border-t border-line">
+      <section className="shadow-3d bg-surface border-t border-line">
         <article className="container-x py-16 max-w-5xl">
           <header className="mb-10">
             <p className="text-accent font-semibold uppercase text-sm tracking-wider mb-2">
@@ -247,7 +247,7 @@ export function HomeSeoBlock() {
                 kaynağı ve doğru yaklaşımı farklı.
               </p>
               <div className="grid sm:grid-cols-2 gap-4 mt-4">
-                <div className="bg-white border border-line p-5">
+                <div className="shadow-3d bg-white border border-line p-5">
                   <h4 className="font-semibold text-primary mb-1">1. Sigorta Atması</h4>
                   <p className="text-sm">
                     Belirti: pano içinde kolu düşmüş otomat. Kaynak: aşırı yük, kısa devre veya
@@ -258,7 +258,7 @@ export function HomeSeoBlock() {
                     </Link>.
                   </p>
                 </div>
-                <div className="bg-white border border-line p-5">
+                <div className="shadow-3d bg-white border border-line p-5">
                   <h4 className="font-semibold text-primary mb-1">2. Kaçak Akım Tetiklemesi</h4>
                   <p className="text-sm">
                     Belirti: kaçak akım rölesinin kendiliğinden düşmesi. Kaynak: ıslak hacimde
@@ -269,7 +269,7 @@ export function HomeSeoBlock() {
                     cihazla hat hat yapılmalı.
                   </p>
                 </div>
-                <div className="bg-white border border-line p-5">
+                <div className="shadow-3d bg-white border border-line p-5">
                   <h4 className="font-semibold text-primary mb-1">3. Topraklamasızlık</h4>
                   <p className="text-sm">
                     Belirti: metal cihazda karıncalanma, test cihazı toprağı göstermiyor.
@@ -280,7 +280,7 @@ export function HomeSeoBlock() {
                     </Link>.
                   </p>
                 </div>
-                <div className="bg-white border border-line p-5">
+                <div className="shadow-3d bg-white border border-line p-5">
                   <h4 className="font-semibold text-primary mb-1">4. Priz-Anahtar Arızası</h4>
                   <p className="text-sm">
                     Belirti: prizden cihaza akım gitmemesi, anahtarın ışığı yakmaması. Kaynak:
@@ -290,7 +290,7 @@ export function HomeSeoBlock() {
                     </Link>.
                   </p>
                 </div>
-                <div className="bg-white border border-line p-5">
+                <div className="shadow-3d bg-white border border-line p-5">
                   <h4 className="font-semibold text-primary mb-1">5. Aydınlatma Arızası</h4>
                   <p className="text-sm">
                     Belirti: avize hiç yanmıyor ya da titriyor. Kaynak: LED sürücü arızası,
@@ -300,7 +300,7 @@ export function HomeSeoBlock() {
                     </Link>.
                   </p>
                 </div>
-                <div className="bg-white border border-line p-5">
+                <div className="shadow-3d bg-white border border-line p-5">
                   <h4 className="font-semibold text-primary mb-1">6. Isıtma-Soğutma Elektriği</h4>
                   <p className="text-sm">
                     Belirti: kombi ateşlenmiyor, klima elektrik almıyor. Kaynak: dar kesit
@@ -314,7 +314,7 @@ export function HomeSeoBlock() {
                     </Link>.
                   </p>
                 </div>
-                <div className="bg-white border border-line p-5">
+                <div className="shadow-3d bg-white border border-line p-5">
                   <h4 className="font-semibold text-primary mb-1">7. Tesisat Yaşlanması</h4>
                   <p className="text-sm">
                     Belirti: sık atan sigorta, eski alüminyum kablolama, kahverengileşmiş
@@ -514,7 +514,7 @@ export function HomeSeoBlock() {
                   <Link
                     key={i.slug}
                     href={`/${i.slug}`}
-                    className="bg-white border border-line p-3 hover:border-accent"
+                    className="shadow-3d bg-white border border-line p-3 hover:border-accent"
                   >
                     <strong className="text-primary">{i.name} Elektrikçi</strong>
                     <span className="block text-ink/70 text-xs mt-1">
@@ -622,7 +622,7 @@ export function HomeSeoBlock() {
               <h3 className="text-2xl text-primary mb-3">Ek Sık Sorulan Sorular</h3>
               <div className="space-y-3 mt-3">
                 {extendedFaq.map((f) => (
-                  <details key={f.q} className="group bg-white border border-line p-5">
+                  <details key={f.q} className="shadow-3d group bg-white border border-line p-5">
                     <summary className="cursor-pointer font-semibold text-primary list-none flex justify-between gap-4">
                       {f.q}
                       <span className="text-accent group-open:rotate-45 transition-transform shrink-0">+</span>
@@ -633,7 +633,7 @@ export function HomeSeoBlock() {
               </div>
             </section>
 
-            <section className="bg-primary text-white p-8 text-center">
+            <section className="shadow-3d bg-primary text-white p-8 text-center">
               <h3 className="text-white text-2xl mb-3">Hâlâ Emin Değil misiniz? Bir Telefon Kadar Yakınız.</h3>
               <p className="text-white/80 mb-5 max-w-2xl mx-auto">
                 İzmir'in hangi ilçesindeyseniz olun — Buca'dan Konak'a, Bornova'dan

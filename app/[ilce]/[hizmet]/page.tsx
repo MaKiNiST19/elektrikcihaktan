@@ -97,7 +97,7 @@ export default async function Page({
           {i.nameLocative} {h.summary.charAt(0).toLowerCase() + h.summary.slice(1)}
         </p>
 
-        <div className="bg-accent text-white p-6 my-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="shadow-3d bg-accent text-white p-6 my-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
             <p className="text-sm uppercase opacity-90">Acil müdahale</p>
             <p className="text-2xl font-bold">
@@ -110,19 +110,19 @@ export default async function Page({
         </div>
 
         <div className="grid sm:grid-cols-4 gap-3 mb-8">
-          <div className="bg-surface p-4">
+          <div className="shadow-3d bg-surface p-4">
             <p className="text-xs uppercase text-ink/60">Fiyat Aralığı</p>
             <p className="font-bold text-primary">{h.priceRange}</p>
           </div>
-          <div className="bg-surface p-4">
+          <div className="shadow-3d bg-surface p-4">
             <p className="text-xs uppercase text-ink/60">Varış Süresi</p>
             <p className="font-bold text-primary">{i.responseTimeMinutes} dk</p>
           </div>
-          <div className="bg-surface p-4">
+          <div className="shadow-3d bg-surface p-4">
             <p className="text-xs uppercase text-ink/60">İş Süresi</p>
             <p className="font-bold text-primary">~{h.durationMinutes} dk</p>
           </div>
-          <div className="bg-surface p-4">
+          <div className="shadow-3d bg-surface p-4">
             <p className="text-xs uppercase text-ink/60">Garanti</p>
             <p className="font-bold text-primary text-sm">{h.warranty.split(",")[0]}</p>
           </div>
@@ -140,7 +140,7 @@ export default async function Page({
           <h2 className="text-2xl mb-4">{i.name}'da Sık Karşılaştığımız Belirtiler</h2>
           <ul className="grid sm:grid-cols-2 gap-2 text-ink/80">
             {h.symptoms.map((s) => (
-              <li key={s} className="flex gap-2 border border-line p-3 text-sm">
+              <li key={s} className="shadow-3d flex gap-2 border border-line p-3 text-sm">
                 <span className="text-accent font-bold">⚠</span>{s}
               </li>
             ))}
@@ -159,7 +159,7 @@ export default async function Page({
           <ol className="space-y-4">
             {h.processSteps.map((s, idx) => (
               <li key={s.step} className="flex gap-4">
-                <span className="shrink-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold">
+                <span className="shadow-3d shrink-0 w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold">
                   {idx + 1}
                 </span>
                 <div>
@@ -179,13 +179,13 @@ export default async function Page({
           </p>
           <div className="flex flex-wrap gap-2">
             {i.mahalleler.slice(0, 20).map((m) => (
-              <span key={m} className="bg-surface px-3 py-1 text-sm">{m} Mh.</span>
+              <span key={m} className="shadow-3d bg-surface px-3 py-1 text-sm">{m} Mh.</span>
             ))}
           </div>
         </section>
 
         {i.sampleJobs.length > 0 && (
-          <section className="mt-10 bg-primary text-white p-6">
+          <section className="shadow-3d mt-10 bg-primary text-white p-6">
             <h2 className="text-white text-xl mb-3">{i.name}'da Gerçek İşler</h2>
             <ul className="space-y-2 text-sm text-white/90">
               {i.sampleJobs.map((j) => <li key={j}>✓ {j}</li>)}
@@ -197,7 +197,7 @@ export default async function Page({
           <h2 className="text-2xl mb-4">{h.shortTitle} Hakkında Sık Sorulanlar</h2>
           <div className="space-y-3">
             {h.faq.map((f) => (
-              <details key={f.q} className="border border-line p-5">
+              <details key={f.q} className="shadow-3d border border-line p-5">
                 <summary className="cursor-pointer font-semibold text-primary">{f.q}</summary>
                 <p className="mt-3 text-ink/80">{f.a}</p>
               </details>
@@ -212,7 +212,7 @@ export default async function Page({
               <Link
                 key={x.slug}
                 href={`/${i.slug}/${x.slug}`}
-                className="border border-line p-4 hover:border-accent"
+                className="shadow-3d border border-line p-4 hover:border-accent"
               >
                 <h3 className="font-semibold text-primary">
                   {i.name} {x.shortTitle}
@@ -233,7 +233,7 @@ export default async function Page({
                 <Link
                   key={n}
                   href={`/${neighbor.slug}/${h.slug}`}
-                  className="border border-line px-4 py-2 text-sm hover:border-accent hover:text-accent"
+                  className="shadow-3d border border-line px-4 py-2 text-sm hover:border-accent hover:text-accent"
                 >
                   {neighbor.name} {h.shortTitle}
                 </Link>

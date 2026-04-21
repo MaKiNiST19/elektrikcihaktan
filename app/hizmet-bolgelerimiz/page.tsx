@@ -23,7 +23,7 @@ export default function Page() {
           <Link
             key={i.slug}
             href={`/${i.slug}`}
-            className="bg-surface p-5 hover:bg-primary hover:text-white transition-colors"
+            className="shadow-3d bg-surface p-5 hover:bg-primary hover:text-white transition-colors"
           >
             <h2 className="text-lg font-semibold">{i.name}</h2>
             <p className="text-xs opacity-70 mt-1">{i.responseTimeMinutes} dk varış</p>

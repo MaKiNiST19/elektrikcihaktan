@@ -5,6 +5,8 @@ import { hizmetler } from "@/data/hizmetler";
 import { ilceler } from "@/data/ilceler";
 import { JsonLd } from "@/components/JsonLd";
 import { HomeSeoBlock } from "@/components/HomeSeoBlock";
+import { HeroBadges } from "@/components/HeroBadges";
+import { WhatsAppIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: `${site.heroTitle} | ${site.phone} | 7/24 Elektrik Tamiratı`,
@@ -65,7 +67,7 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap gap-3">
               <a href={`tel:${site.phoneTel}`} className="btn-accent text-base">
-                📞 {site.phone}
+                {site.phone}
               </a>
               <a
                 href={`https://wa.me/${site.whatsapp}`}
@@ -73,17 +75,13 @@ export default function Home() {
                 rel="noopener"
                 className="btn-whatsapp"
               >
-                💬 WhatsApp
+                <WhatsAppIcon />
+                WhatsApp
               </a>
             </div>
-            <ul className="grid grid-cols-2 gap-3 mt-8 text-sm">
-              <li className="flex items-center gap-2">✓ 15 dakikada yerinizde</li>
-              <li className="flex items-center gap-2">✓ Ücretsiz keşif</li>
-              <li className="flex items-center gap-2">✓ Fatura + garanti</li>
-              <li className="flex items-center gap-2">✓ Sabit ücret, sürpriz yok</li>
-            </ul>
+            <HeroBadges />
           </div>
-          <div className="bg-accent text-white p-8 md:p-10">
+          <div className="shadow-3d bg-accent text-white p-8 md:p-10">
             <h2 className="text-white text-2xl mb-2">Şimdi Arıza Bildir</h2>
             <p className="text-white/90 mb-6 text-sm">
               Telefonla ulaşmanız yeterli. Durumu açıkladığınızda yaklaşık fiyat
@@ -112,7 +110,7 @@ export default function Home() {
               <Link
                 key={h.slug}
                 href={`/hizmetler/${h.slug}`}
-                className="group border border-line p-6 hover:border-accent transition-colors"
+                className="shadow-3d group border border-line p-6 hover:border-accent transition-colors"
               >
                 <h3 className="text-lg mb-2 group-hover:text-accent transition-colors">
                   {h.title}
@@ -140,7 +138,7 @@ export default function Home() {
               <Link
                 key={i.slug}
                 href={`/${i.slug}`}
-                className="bg-white border border-line p-4 text-center hover:bg-primary hover:text-white hover:border-primary transition-colors"
+                className="shadow-3d bg-white border border-line p-4 text-center hover:bg-primary hover:text-white hover:border-primary transition-colors"
               >
                 <span className="block font-semibold">{i.name}</span>
                 <span className="block text-xs opacity-70">Elektrikçi</span>
@@ -160,7 +158,7 @@ export default function Home() {
           </header>
           <div className="space-y-3">
             {faq.map((f) => (
-              <details key={f.q} className="group border border-line p-5">
+              <details key={f.q} className="shadow-3d group border border-line p-5">
                 <summary className="cursor-pointer font-semibold text-primary list-none flex justify-between">
                   {f.q}
                   <span className="text-accent group-open:rotate-45 transition-transform">+</span>

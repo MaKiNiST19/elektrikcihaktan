@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { PageEyebrow } from "@/components/PageEyebrow";
 
 export const metadata: Metadata = {

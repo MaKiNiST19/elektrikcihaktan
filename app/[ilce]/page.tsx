@@ -77,25 +77,25 @@ export default async function Page({ params }: { params: Promise<{ ilce: string 
         <p className="text-lg text-ink/80 leading-relaxed">{i.intro}</p>
 
         <div className="grid sm:grid-cols-4 gap-3 my-8">
-          <div className="bg-surface p-4">
+          <div className="shadow-3d bg-surface p-4">
             <p className="text-xs uppercase text-ink/60">Varış Süresi</p>
             <p className="font-bold text-primary">{i.responseTimeMinutes} dakika</p>
           </div>
-          <div className="bg-surface p-4">
+          <div className="shadow-3d bg-surface p-4">
             <p className="text-xs uppercase text-ink/60">Hizmet Saatleri</p>
             <p className="font-bold text-primary">7 gün 24 saat</p>
           </div>
-          <div className="bg-surface p-4">
+          <div className="shadow-3d bg-surface p-4">
             <p className="text-xs uppercase text-ink/60">Keşif</p>
             <p className="font-bold text-primary">Ücretsiz</p>
           </div>
-          <div className="bg-surface p-4">
+          <div className="shadow-3d bg-surface p-4">
             <p className="text-xs uppercase text-ink/60">Tecrübe</p>
             <p className="font-bold text-primary">{new Date().getFullYear() - site.foundingYear}+ yıl</p>
           </div>
         </div>
 
-        <div className="bg-primary text-white p-8 my-8">
+        <div className="shadow-3d bg-primary text-white p-8 my-8">
           <h2 className="text-white text-2xl mb-2">{i.name} İçin Acil Elektrikçi</h2>
           <p className="text-white/80 mb-4">{i.localNote}</p>
           <a href={`tel:${site.phoneTel}`} className="btn-accent text-lg">
@@ -112,7 +112,7 @@ export default async function Page({ params }: { params: Promise<{ ilce: string 
               <Link
                 key={h.slug}
                 href={`/${i.slug}/${h.slug}`}
-                className="border border-line p-4 hover:border-accent"
+                className="shadow-3d border border-line p-4 hover:border-accent"
               >
                 <h3 className="font-semibold text-primary mb-1">
                   {i.name} {h.shortTitle}
@@ -125,7 +125,7 @@ export default async function Page({ params }: { params: Promise<{ ilce: string 
         </section>
 
         {i.sampleJobs.length > 0 && (
-          <section className="mt-12 bg-surface p-6">
+          <section className="shadow-3d mt-12 bg-surface p-6">
             <h2 className="text-2xl mb-3">{i.name}'da Yaptığımız İşlerden</h2>
             <ul className="space-y-2 text-ink/80">
               {i.sampleJobs.map((j) => (
@@ -144,7 +144,7 @@ export default async function Page({ params }: { params: Promise<{ ilce: string 
           </p>
           <div className="flex flex-wrap gap-2">
             {i.mahalleler.map((m) => (
-              <span key={m} className="bg-surface px-3 py-1 text-sm">{m} Mh.</span>
+              <span key={m} className="shadow-3d bg-surface px-3 py-1 text-sm">{m} Mh.</span>
             ))}
           </div>
         </section>
@@ -172,7 +172,7 @@ export default async function Page({ params }: { params: Promise<{ ilce: string 
                 <Link
                   key={n}
                   href={`/${neighbor.slug}`}
-                  className="border border-line px-4 py-2 text-sm hover:border-accent hover:text-accent"
+                  className="shadow-3d border border-line px-4 py-2 text-sm hover:border-accent hover:text-accent"
                 >
                   {neighbor.name} Elektrikçi
                 </Link>
@@ -181,7 +181,7 @@ export default async function Page({ params }: { params: Promise<{ ilce: string 
           </div>
         </section>
 
-        <div className="mt-12 bg-accent text-white p-8 text-center">
+        <div className="shadow-3d mt-12 bg-accent text-white p-8 text-center">
           <p className="mb-3 text-lg">{i.name} için acil elektrik servisi</p>
           <a href={`tel:${site.phoneTel}`} className="btn-phone-lg">
             📞 {site.phone}

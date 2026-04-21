@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useEffect, useState } from "react";
 
 const STORAGE_KEY = "eh_consent_v1";
@@ -29,7 +29,7 @@ export function ConsentBanner() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-sm bg-primary text-white p-4 shadow-xl z-50 text-sm">
+    <div className="shadow-3d fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-sm bg-primary text-white p-4 shadow-xl z-50 text-sm">
       <p className="mb-3">
         Hizmet kalitesini artırmak için çerez kullanıyoruz. Analitik ve reklam çerezlerini onaylıyor musunuz?
       </p>

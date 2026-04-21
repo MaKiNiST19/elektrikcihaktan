@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { PageEyebrow } from "@/components/PageEyebrow";
 
@@ -26,7 +26,7 @@ export default function Page() {
         <li>Tüm işlerde fatura ve işçilik garantisi.</li>
         <li>Yolda canlı konum paylaşımı, ortalama 15 dakika varış.</li>
       </ul>
-      <div className="mt-10 p-6 bg-surface">
+      <div className="shadow-3d mt-10 p-6 bg-surface">
         <p className="text-lg">
           Acil durumda hemen arayın:{" "}
           <a href={`tel:${site.phoneTel}`} className="text-accent font-bold text-2xl">

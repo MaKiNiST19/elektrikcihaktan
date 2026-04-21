@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import type { Metadata } from "next";
 import { hizmetler } from "@/data/hizmetler";
 import { PageEyebrow } from "@/components/PageEyebrow";
@@ -23,7 +23,7 @@ export default function Page() {
           <Link
             key={h.slug}
             href={`/hizmetler/${h.slug}`}
-            className="group border border-line p-6 hover:border-accent transition-colors"
+            className="shadow-3d group border border-line p-6 hover:border-accent transition-colors"
           >
             <h2 className="text-lg mb-2 group-hover:text-accent">{h.title}</h2>
             <p className="text-sm text-ink/80">{h.summary}</p>

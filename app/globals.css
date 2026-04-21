@@ -18,6 +18,12 @@
 }
 
 @layer utilities {
+  .shadow-3d {
+    box-shadow:
+      rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
   .text-shine {
     background: linear-gradient(to right, #9f9f9f 0, #fff 10%, #868686 20%);
     background-size: 200% auto;
@@ -39,7 +45,7 @@
 
 @layer components {
   .btn-shimmer {
-    @apply relative inline-flex items-center justify-center gap-2 overflow-hidden border border-white/20 font-semibold transition-all duration-300 ease-in-out hover:scale-[1.04] hover:shadow-xl;
+    @apply shadow-3d relative inline-flex items-center justify-center gap-2 overflow-hidden border border-white/20 font-semibold transition-all duration-300 ease-in-out hover:scale-[1.04];
   }
   .btn-shimmer::after {
     content: "";

@@ -1,10 +1,10 @@
-import { site } from "@/lib/site";
+﻿import { site } from "@/lib/site";
 
 export function AuthorByline({ updated }: { updated?: string }) {
   const date = updated ?? new Date().toISOString().slice(0, 10);
   return (
     <aside className="border-t border-b border-line my-8 py-5 flex flex-col sm:flex-row gap-4 items-start">
-      <div className="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl shrink-0">
+      <div className="shadow-3d w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl shrink-0">
         V
       </div>
       <div className="text-sm text-ink/80">

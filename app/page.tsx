@@ -179,9 +179,9 @@ export default function Home() {
               </a>
             </div>
             <div className="grid sm:grid-cols-3 gap-3">
-              <RatingBadge title="20 Yıllık Deneyim" subtitle="Belgeli uzman ekip" />
-              <RatingBadge title="30 Dakikada Hizmet" subtitle="İzmir merkez bölgeleri" />
-              <RatingBadge title="Garantili İşçilik" subtitle="Faturalı ve belgeli" />
+              <RatingBadge rating={5} title="20 Yıllık Deneyim" subtitle="Belgeli uzman ekip" />
+              <RatingBadge rating={5} title="30 Dakikada Hizmet" subtitle="İzmir merkez bölgeleri" />
+              <RatingBadge rating={5} title="Garantili İşçilik" subtitle="Faturalı ve belgeli" />
             </div>
           </div>
         </div>

@@ -38,6 +38,13 @@ const faq = [
 ];
 
 export default function Home() {
+  const imageMap: Record<string, string> = {
+    "elektrik-tesisat": "/elektrik-tesisati-cekme-yenileme-izmir.jpg",
+    "klima-montaji": "/klima-elektrik-tesisati-tamiri-izmir.jpg",
+    "kombi-montaji": "/kombi-elektrik-baglantisi-tamiri-izmir.jpg",
+    default: "/7-24-elektrikci-izmir.jpg",
+  };
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -110,15 +117,22 @@ export default function Home() {
               <Link
                 key={h.slug}
                 href={`/hizmetler/${h.slug}`}
-                className="shadow-3d group border border-line p-6 hover:border-accent transition-colors"
+                className="shadow-3d group border border-line hover:border-accent transition-colors overflow-hidden"
               >
-                <h3 className="text-lg mb-2 group-hover:text-accent transition-colors">
-                  {h.title}
-                </h3>
-                <p className="text-sm text-ink/80">{h.summary}</p>
-                <span className="inline-block mt-3 text-accent font-semibold text-sm">
-                  Detaylar →
-                </span>
+                <img
+                  src={imageMap[h.slug] || imageMap.default}
+                  alt={h.title}
+                  className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="p-6">
+                  <h3 className="text-lg mb-2 group-hover:text-accent transition-colors">
+                    {h.title}
+                  </h3>
+                  <p className="text-sm text-ink/80">{h.summary}</p>
+                  <span className="inline-block mt-3 text-accent font-semibold text-sm">
+                    Detaylar →
+                  </span>
+                </div>
               </Link>
             ))}
           </div>

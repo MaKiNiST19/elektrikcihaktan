@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 
 const navLinks = [
   { href: "/", label: "Anasayfa" },
-  { href: "/hakkimizda", label: "Haktan" },
+  { href: "/hakkimizda", label: "Hakkımızda" },
   { href: "/hizmetler", label: "Hizmetler" },
   { href: "/hizmet-bolgelerimiz", label: "Servis Bölgeleri" },
   { href: "/blog", label: "Blog" },

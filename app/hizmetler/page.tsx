@@ -11,6 +11,13 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
+  const imageMap: Record<string, string> = {
+    "elektrik-tesisat": "/elektrik-tesisati-cekme-yenileme-izmir.jpg",
+    "klima-montaji": "/klima-elektrik-tesisati-tamiri-izmir.jpg",
+    "kombi-montaji": "/kombi-elektrik-baglantisi-tamiri-izmir.jpg",
+    default: "/7-24-elektrikci-izmir.jpg",
+  };
+
   return (
     <section className="container-x py-16">
       <PageEyebrow />
@@ -23,13 +30,22 @@ export default function Page() {
           <Link
             key={h.slug}
             href={`/hizmetler/${h.slug}`}
-            className="shadow-3d group border border-line p-6 hover:border-accent transition-colors"
+            className="shadow-3d group border border-line hover:border-accent transition-colors overflow-hidden"
           >
-            <h2 className="text-lg mb-2 group-hover:text-accent">{h.title}</h2>
-            <p className="text-sm text-ink/80">{h.summary}</p>
-            <p className="text-xs text-ink/60 mt-3">
-              <strong>Fiyat:</strong> {h.priceRange}
-            </p>
+            <div className="w-full h-56 bg-surface flex items-center justify-center overflow-hidden">
+              <img
+                src={imageMap[h.slug] || imageMap.default}
+                alt={h.title}
+                className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="p-6">
+              <h2 className="text-lg mb-2 group-hover:text-accent transition-colors">{h.title}</h2>
+              <p className="text-sm text-ink/80">{h.summary}</p>
+              <p className="text-xs text-ink/60 mt-3">
+                <strong>Fiyat:</strong> {h.priceRange}
+              </p>
+            </div>
           </Link>
         ))}
       </div>

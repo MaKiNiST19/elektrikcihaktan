@@ -152,15 +152,104 @@ export default async function Page({ params }: { params: Promise<{ ilce: string 
         {i.landmarks.length > 0 && (
           <section className="mt-10">
             <h2 className="text-2xl mb-4">Çevredeki Önemli Yerler</h2>
+            <p className="text-ink/80 mb-3">
+              {i.name}'da aşağıdaki önemli yerler ve yaşam alanlarına hizmet veriyoruz:
+            </p>
             <div className="flex flex-wrap gap-2">
               {i.landmarks.map((l) => (
-                <span key={l} className="bg-primary/10 text-primary px-3 py-1 text-sm">
+                <span key={l} className="shadow-3d bg-primary/10 text-primary px-3 py-1 text-sm border border-primary/20">
                   📍 {l}
                 </span>
               ))}
             </div>
           </section>
         )}
+
+        <section className="mt-12 bg-white/50 shadow-3d border border-line p-8 rounded-lg">
+          <h2 className="text-2xl mb-6 font-bold text-primary">{i.name}'da Elektrikçi Volkan Haktan</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="font-bold text-lg mb-3 text-accent">Neden Biz?</h3>
+              <ul className="space-y-2 text-ink/80">
+                <li className="flex gap-2"><span className="text-accent">✓</span>20+ yıllık deneyim ve uzmanlik</li>
+                <li className="flex gap-2"><span className="text-accent">✓</span>Belgeli, eğitimli teknisyenler</li>
+                <li className="flex gap-2"><span className="text-accent">✓</span>{i.responseTimeMinutes} dakikada hizmet</li>
+                <li className="flex gap-2"><span className="text-accent">✓</span>Tüm işlerde fatura ve garanti</li>
+                <li className="flex gap-2"><span className="text-accent">✓</span>7 gün 24 saat hizmet</li>
+                <li className="flex gap-2"><span className="text-accent">✓</span>Arıza tespiti ücretsiz</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg mb-3 text-accent">Uzmanlık Alanlarımız</h3>
+              <ul className="space-y-2 text-ink/80">
+                <li className="flex gap-2"><span className="text-accent">→</span>Acil elektrik arızaları</li>
+                <li className="flex gap-2"><span className="text-accent">→</span>Elektrik tesisat ve yenileme</li>
+                <li className="flex gap-2"><span className="text-accent">→</span>Topraklama ölçümü ve yapımı</li>
+                <li className="flex gap-2"><span className="text-accent">→</span>Sigorta ve pano değişimi</li>
+                <li className="flex gap-2"><span className="text-accent">→</span>Kaçak akım tespiti</li>
+                <li className="flex gap-2"><span className="text-accent">→</span>Kombi, klima, avize montajı</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-12">
+          <h2 className="text-2xl mb-6 font-bold text-primary">Sık Sorulan Sorular</h2>
+          <div className="space-y-3">
+            <details className="shadow-3d border border-line p-5 group">
+              <summary className="cursor-pointer font-bold text-primary flex justify-between">
+                {i.name}'da kaç dakikada ulaşıyorsunuz?
+                <span className="text-accent group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <p className="mt-3 text-ink/80">
+                {i.name} ilçesinin merkez mahallelerine ortalama {i.responseTimeMinutes} dakikada ulaşıyoruz.
+                Elektrik arızası meydana gelmesiyle beraber en kısa sürede yerinizde olmayı taahhüt ederiz.
+              </p>
+            </details>
+            <details className="shadow-3d border border-line p-5 group">
+              <summary className="cursor-pointer font-bold text-primary flex justify-between">
+                {i.name}'nın hangi mahallelerine hizmet veriyorsunuz?
+                <span className="text-accent group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <p className="mt-3 text-ink/80 mb-2">
+                {i.name} ilçesinin tüm mahallelerine hizmet veriyoruz:
+              </p>
+              <p className="text-ink/70 text-sm">
+                {i.mahalleler.join(", ")}
+              </p>
+            </details>
+            <details className="shadow-3d border border-line p-5 group">
+              <summary className="cursor-pointer font-bold text-primary flex justify-between">
+                Arıza tespiti ücretli midir?
+                <span className="text-accent group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <p className="mt-3 text-ink/80">
+                Hayır. Yerinde arıza tespiti tamamen ücretsizdir. Sadece onay verdiğiniz onarımın ücretini alırız.
+                Onarım yaptırmazsanız hiçbir ödeme yapmanız gerekmez.
+              </p>
+            </details>
+            <details className="shadow-3d border border-line p-5 group">
+              <summary className="cursor-pointer font-bold text-primary flex justify-between">
+                Elektrikçi Volkan Haktan'ın tecrübesi nedir?
+                <span className="text-accent group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <p className="mt-3 text-ink/80">
+                Elektrikçi Volkan Haktan, 20 yılı aşkın deneyimle İzmir'de hizmet veren, belgeli elektrik teknisyenidir.
+                TEDAŞ standartlarına uygun, yönetmelikçe tanınmış uzman bir profesyoneldir.
+              </p>
+            </details>
+            <details className="shadow-3d border border-line p-5 group">
+              <summary className="cursor-pointer font-bold text-primary flex justify-between">
+                Hafta sonu ve gece çağırabilir miyim?
+                <span className="text-accent group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <p className="mt-3 text-ink/80">
+                Evet. 7 gün 24 saat hizmet veriyoruz. Hafta sonu, tatil günleri ve gece için özel bir ücret farkı uygulamıyoruz.
+                Aynı sabit saat ücreti geçerlidir.
+              </p>
+            </details>
+          </div>
+        </section>
 
         <section className="mt-12">
           <h2 className="text-2xl mb-4">Komşu İlçeler</h2>

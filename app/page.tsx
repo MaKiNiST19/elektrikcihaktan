@@ -5,7 +5,7 @@ import { hizmetler } from "@/data/hizmetler";
 import { ilceler } from "@/data/ilceler";
 import { JsonLd } from "@/components/JsonLd";
 import { HomeSeoBlock } from "@/components/HomeSeoBlock";
-import { HeroBadges } from "@/components/HeroBadges";
+import { RatingBadge } from "@/components/foundations/rating-badge";
 import { WhatsAppIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
@@ -16,24 +16,108 @@ export const metadata: Metadata = {
 
 const faq = [
   {
+    q: "Sigorta atması nasıl çözülür?",
+    a: "Sigortanın sürekli atması genellikle devrede aşırı yük, kaçak akım veya kısa devre anlamına gelir. Arıza tespiti için çağırın, cihazlı olarak tespit edip çözeriz.",
+  },
+  {
+    q: "Elektrik kesintisi neden olur ve kim çözer?",
+    a: "Kesinti ana sigortada, sayaçta veya şebekede meydana gelir. Sayacın yanındaki ana sigorta attıysa arıza evde — biz çözeriz. Sonda yoksa GDZ'ye arayın.",
+  },
+  {
+    q: "Kaçak akım rölesi nedir ve ne işe yarar?",
+    a: "30mA kaçak akım rölesi elektrik kaçağını tespit edip devreyi keserek sizi elektrik çarpılmasından koruyan cihazıdır. Modern evlerde şart.",
+  },
+  {
+    q: "Topraklama olmadan elektrik kullanılabilir mi?",
+    a: "Topraklamasız tesisat eski yapılarda da hâlâ vardır ama tehlikelidir. Beyaz eşya ve metal yüzeyler elektrik çarpılma riski taşır. Mutlaka çekilmelidir.",
+  },
+  {
+    q: "Prizim yanmış — ne yapmalıyım?",
+    a: "Yanmış bir priz yangın başlatabilir. Hemen arayın, kullanmayın. Arkasındaki kablo da hasar görmüş olabilir, kontrol gerektirir.",
+  },
+  {
+    q: "Elektrik faturası neden yüksek geliyor?",
+    a: "Kaçak elektrik, enerji saçan cihazlar veya başında hata olabilir. Tesisat kontrolü ve cihaz analizi yapabiliriz.",
+  },
+  {
+    q: "Priz topraklamasız — güvensiz mi?",
+    a: "Evet. Özellikle çamaşır makinesi, fırın gibi yüksek güçlü cihazlar için topraklamalı priz şarttır.",
+  },
+  {
+    q: "Hava kötüyken elektrik sorunu yaşıyorum — neden?",
+    a: "Yağmur ve nem tesinatı ıslatarak kaçak oluşturur. Çatı, dış cephe, balkon prizleri şüpheli. Termal kamerayla tespit edebiliriz.",
+  },
+  {
+    q: "Avizem sallanıyor — düşme riski var mı?",
+    a: "15 kg üzeri kristal avizeler özel ağır yük kancası gerektirir. Standart kanca yıllar sonra gevşeyebilir. Kontrol ve gerekirse değişim yapmalıyız.",
+  },
+  {
+    q: "Kombi elektrik bağlantısı nasıl yapılmalı?",
+    a: "Kombi için ayrı W-otomat sigorta ve topraklamalı priz gerekir. Uzatma kablo kullanılmaz — enerji kaybına ve yangına neden olur.",
+  },
+  {
+    q: "Klima için ayrı priz yapılması şart mı?",
+    a: "12.000 BTU üzeri klimalarda evet. Ayrı sigorta ve topraklamalı priz güvenlik ve arıza izolasyonu için gereklidir.",
+  },
+  {
+    q: "Tesisat yenilemesi için duvar kırmak şart mı?",
+    a: "Büyük ölçüde evet, ama sıva üstü kanal veya asma tavan yolu ile minimum hasarla yapabiliriz. Keşifte seçeneği gösteririz.",
+  },
+  {
     q: "İzmir'in hangi ilçelerinde hizmet veriyorsunuz?",
-    a: "Konak, Buca, Karabağlar, Bornova, Bayraklı, Gaziemir, Balçova başta olmak üzere İzmir'in tüm ilçelerinde 7/24 hizmet veriyoruz. Merkez ilçelere ortalama 15 dakikada ulaşıyoruz.",
+    a: "Konak, Buca, Karabağlar, Bornova, Bayraklı, Gaziemir, Balçova başta olmak üzere İzmir'in tüm ilçelerinde 7/24 hizmet veriyoruz.",
   },
   {
-    q: "Gece veya hafta sonu arayabilir miyim?",
-    a: "Evet. 7 gün 24 saat açığız. Gece ve tatil ücreti farkı uygulamıyoruz, saat ücreti sabittir.",
+    q: "Gece yarısı elektrikçi çağırabilir miyim?",
+    a: "Evet. 7 gün 24 saat hizmet veriyoruz. Gece ve tatil için ek ücret uygulamıyoruz, sabit saat ücreti geçerlidir.",
   },
   {
-    q: "Arıza tespiti ücretli mi?",
-    a: "Yerinde arıza tespiti ücretsizdir. Sadece onay verdiğiniz onarımın ücretini alıyoruz, sürpriz fiyat yoktur.",
+    q: "Arıza tespiti ücretsiz midir?",
+    a: "Evet, yerinde arıza tespiti tamamen ücretsizdir. Sadece onay verdiğiniz onarımın ücretini alırız.",
   },
   {
-    q: "Ne kadar sürede geliyorsunuz?",
-    a: "Merkez ilçelerde ortalama 15 dakika, çevre ilçelerde 25-30 dakika. Yolda canlı konum paylaşımı yapıyoruz.",
+    q: "Ne kadar sürede ulaşıyorsunuz?",
+    a: "Merkez ilçelerde ortalama 15 dakika, çevre ilçelerde 25-30 dakika. Yolda canlı konum paylaşımı sağlanır.",
   },
   {
     q: "Fatura ve garanti veriyor musunuz?",
-    a: "Tüm işlerde fatura keser, işçilik garantisi veririz. Kullanılan malzemeler üretici garantisine tabidir.",
+    a: "Tüm işlerde resmi fatura keseriz. İşçilikte 2 yıl, tesisat işlerinde 5 yıl garanti veririz.",
+  },
+  {
+    q: "Elektrik fiyatları ne kadar?",
+    a: "Arızaya ve işin kapsamına göre değişir. Keşiften sonra sabit fiyat söyleriz, sonradan değişmez.",
+  },
+  {
+    q: "Sigortam sürekli atıyor, kendim değiştirebilir miyim?",
+    a: "Hayır. Sigortanın atması bir belirti — asıl sebebi tespit etmek gerekir. Yanlış sigorta takılırsa daha tehlikeli olur.",
+  },
+  {
+    q: "Pano yenilemesi ne kadar sürer?",
+    a: "Standart daire için 2-3 saat. Elektrik sadece o süre kesintiye uğrar, hemen sonra geri verilir.",
+  },
+  {
+    q: "Eski cam sigortaları W-otomat'a çevirmek zorunlu mu?",
+    a: "Yasal zorunluluk yönetmelik açısından vardır. Yangın riski ve kaçak akım koruması için kesinlikle geçilmelidir.",
+  },
+  {
+    q: "Kaçak akım rölesi atıyor — neyin arızası?",
+    a: "Nemli priz, eski cihaz yalıtımı veya tesisatta zarar gibi nedenler olabilir. Cihazlı testle kaynağı bulup çözeriz.",
+  },
+  {
+    q: "Metal cihaza dokununca karıncalanma hissediyorum?",
+    a: "Kaçak elektrik var demektir. Elektrik çarpılma riskidir — hemen arıza tespiti yapın.",
+  },
+  {
+    q: "Yeni priz ekletmek için ne kadar ödenir?",
+    a: "Tek prizin değişimi 200-500 TL arası, ek priz çekimi 500-1000 TL arası değişiklik gösterir. Keşifle net fiyat söyleriz.",
+  },
+  {
+    q: "LED aydınlatma montajı yapıyor musunuz?",
+    a: "Evet. Mutfak, asma tavan, RGB uygulamaları, akıllı ev entegrasyonu yapabiliriz.",
+  },
+  {
+    q: "Uydu anten ve internet prizi çekiliyor mu?",
+    a: "Evet. Çanak anten ayarı, fiber internet prizi, Wi-Fi mesh kurulumu hizmetlerimiz içinde.",
   },
 ];
 
@@ -59,20 +143,28 @@ export default function Home() {
     <>
       <JsonLd data={faqSchema} />
 
-      <section className="bg-primary text-white">
-        <div className="container-x py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
-          <div>
+      <section
+        className="relative bg-primary text-white overflow-hidden"
+        style={{
+          backgroundImage: "url(/elektrikci-hero.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-primary/85"></div>
+        <div className="relative container-x py-16 md:py-24">
+          <div className="max-w-2xl">
             <p className="text-shine font-semibold mb-3 uppercase tracking-wider text-sm">
               20+ Yıl Tecrübe · İzmir'in Tamamı
             </p>
             <h1 className="text-4xl md:text-5xl text-white leading-tight mb-4">
               İzmir 7/24 Acil Elektrikçi
             </h1>
-            <p className="text-lg text-white/80 mb-6">
+            <p className="text-lg text-white/80 mb-8">
               {site.tagline}. Sigorta atması, elektrik kesintisi, kaçak tespiti
               ve tüm montaj işleriniz için tek telefon.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 mb-10">
               <a href={`tel:${site.phoneTel}`} className="btn-accent text-base">
                 {site.phone}
               </a>
@@ -86,20 +178,11 @@ export default function Home() {
                 WhatsApp
               </a>
             </div>
-            <HeroBadges />
-          </div>
-          <div className="shadow-3d bg-accent text-white p-8 md:p-10">
-            <h2 className="text-white text-2xl mb-2">Şimdi Arıza Bildir</h2>
-            <p className="text-white/90 mb-6 text-sm">
-              Telefonla ulaşmanız yeterli. Durumu açıkladığınızda yaklaşık fiyat
-              aralığını telefondan söylüyoruz.
-            </p>
-            <a
-              href={`tel:${site.phoneTel}`}
-              className="btn-phone-lg w-full text-center"
-            >
-              {site.phone}
-            </a>
+            <div className="grid sm:grid-cols-3 gap-3">
+              <RatingBadge title="20 Yıllık Deneyim" subtitle="Belgeli uzman ekip" />
+              <RatingBadge title="30 Dakikada Hizmet" subtitle="İzmir merkez bölgeleri" />
+              <RatingBadge title="Garantili İşçilik" subtitle="Faturalı ve belgeli" />
+            </div>
           </div>
         </div>
       </section>
@@ -112,7 +195,7 @@ export default function Home() {
             </p>
             <h2 className="text-3xl md:text-4xl">Tüm Elektrik İşleri Tek Adresten</h2>
           </header>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
             {hizmetler.map((h) => (
               <Link
                 key={h.slug}
@@ -137,6 +220,35 @@ export default function Home() {
                 </div>
               </Link>
             ))}
+          </div>
+
+          <div className="shadow-3d bg-gradient-to-r from-accent to-accent/80 text-white p-8 rounded-lg">
+            <div className="grid md:grid-cols-3 gap-6 items-center">
+              <div>
+                <h2 className="text-2xl font-bold mb-2">Şimdi Arıza Bildir</h2>
+                <p className="text-white/90">
+                  Telefonla ulaşmanız yeterli. Durumu açıkladığınızda yaklaşık fiyat
+                  aralığını söyleriz.
+                </p>
+              </div>
+              <div className="md:col-span-2 flex flex-col sm:flex-row gap-4">
+                <a
+                  href={`tel:${site.phoneTel}`}
+                  className="btn-phone-lg flex-1 text-center"
+                >
+                  📞 {site.phone} — ARA
+                </a>
+                <a
+                  href={`https://wa.me/${site.whatsapp}`}
+                  target="_blank"
+                  rel="noopener"
+                  className="btn-whatsapp flex-1 flex items-center justify-center gap-2"
+                >
+                  <WhatsAppIcon className="w-5 h-5" />
+                  WhatsApp Mesaj
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -165,21 +277,22 @@ export default function Home() {
       </section>
 
       <section className="py-16 md:py-20">
-        <div className="container-x max-w-3xl">
+        <div className="container-x">
           <header className="text-center mb-10">
             <p className="text-accent font-semibold uppercase text-sm tracking-wider mb-2">
               Sık Sorulan Sorular
             </p>
-            <h2 className="text-3xl md:text-4xl">Merak Ettikleriniz</h2>
+            <h2 className="text-3xl md:text-4xl mb-2">Merak Ettikleriniz</h2>
+            <p className="text-ink/70">En yaygın elektrik sorunları ve çözümlerine dair sorular</p>
           </header>
-          <div className="space-y-3">
+          <div className="grid md:grid-cols-2 gap-4">
             {faq.map((f) => (
               <details key={f.q} className="shadow-3d group border border-line p-5">
-                <summary className="cursor-pointer font-semibold text-primary list-none flex justify-between">
+                <summary className="cursor-pointer font-semibold text-primary list-none flex justify-between text-sm">
                   {f.q}
-                  <span className="text-accent group-open:rotate-45 transition-transform">+</span>
+                  <span className="text-accent group-open:rotate-45 transition-transform flex-shrink-0 ml-2">+</span>
                 </summary>
-                <p className="mt-3 text-ink/80">{f.a}</p>
+                <p className="mt-3 text-ink/80 text-sm">{f.a}</p>
               </details>
             ))}
           </div>

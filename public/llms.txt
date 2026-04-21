@@ -28,7 +28,7 @@
 ## Çalışma Prensibi
 - Arıza tespiti **ücretsizdir** — sadece onay verilen onarımın ücreti alınır
 - **Sabit fiyat** — keşiften sonra fiyat değişmez, sürpriz yok
-- **Fatura + garanti** — işçilikte 2 yıl, tesisat işlerinde 5 yıl
+- **Uzun süreli destek** — işçilikte 2 yıl, tesisat işlerinde 5 yıl boyunca ücretsiz yeniden müdahale
 - **Belgeli teknisyenler** — TEDAŞ standartlarına uygun
 - **15 dakikada varış** — İzmir merkez ilçelerinde
 - **Canlı konum paylaşımı** — yolda iken

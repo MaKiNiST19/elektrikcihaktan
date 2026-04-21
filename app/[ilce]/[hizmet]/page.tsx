@@ -90,7 +90,8 @@ export default async function Page({
           <span>{h.shortTitle}</span>
         </nav>
 
-        <PageEyebrow />n        <h1 className="text-4xl mb-4">
+        <PageEyebrow />
+        <h1 className="text-4xl mb-4">
           {i.name} {h.title}
         </h1>
         <p className="text-lg text-ink/80 leading-relaxed">
@@ -124,7 +125,7 @@ export default async function Page({
             <p className="font-bold text-primary">~{h.durationMinutes} dk</p>
           </div>
           <div className="shadow-3d bg-surface p-4">
-            <p className="text-xs uppercase text-ink/60">Garanti</p>
+            <p className="text-xs uppercase text-ink/60">Destek Süresi</p>
             <p className="font-bold text-primary text-sm">{h.warranty.split(",")[0]}</p>
           </div>
         </div>

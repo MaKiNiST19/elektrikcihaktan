@@ -3,7 +3,7 @@ import { PageEyebrow } from "@/components/PageEyebrow";
 
 export const metadata: Metadata = {
   title: "Blog — Elektrik Rehberleri",
-  description: "Elektrik arızaları, güvenlik, fatura tasarrufu ve montaj rehberleri. Usta gözünden pratik bilgiler.",
+  description: "Elektrik arızaları, güvenlik, enerji tasarrufu ve montaj rehberleri. Usta gözünden pratik bilgiler.",
   alternates: { canonical: "/blog" },
 };
 

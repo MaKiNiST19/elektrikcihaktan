@@ -5,7 +5,7 @@ import { PageEyebrow } from "@/components/PageEyebrow";
 export const metadata: Metadata = {
   title: "Hakkımızda | Elektrikçi Volkan Haktan | İzmir 7/24",
   description:
-    "Elektrikçi Volkan Haktan, 20 yıllık deneyim, İzmir'de 7/24 elektrik hizmetleri. Arıza tespiti ücretsiz, sabit fiyat, fatura garantili. Hakkımızda sayfası.",
+    "Elektrikçi Volkan Haktan, 20 yıllık deneyim, İzmir'de 7/24 elektrik hizmetleri. Arıza tespiti ücretsiz, sabit fiyat, uzun süreli destek. Hakkımızda sayfası.",
   alternates: { canonical: "/hakkimizda" },
 };
 
@@ -46,8 +46,8 @@ export default function Page() {
               Volkan Haktan'ın felsefesi basitçe şudur: "Elektrik arızası mühendislik bilgisi
               kadar sabır ve titizlik gerektirir." Her müşteriyi kendi ev sahibiymiş gibi
               değerlendiren Volkan Haktan, mühendislik bilgisini insani değerlerle birleştirerek
-              hizmet sunmaktadır. Usta, yapılan her işte garantinin yanı sıra müşteri memnuniyetini
-              de taahhüt eder.
+              hizmet sunmaktadır. Usta, yapılan her işte uzun süreli destek ve müşteri memnuniyetini
+              taahhüt eder.
             </p>
             <p>
               Belgeli elektrik teknisyeni olan Volkan Haktan'ın yanında çalışan tüm ekip üyeleri
@@ -131,10 +131,10 @@ export default function Page() {
           <div className="flex gap-4">
             <div className="text-accent font-bold text-2xl flex-shrink-0">✓</div>
             <div>
-              <h3 className="font-bold text-lg mb-2">Tüm İşlerde Fatura & Garanti</h3>
+              <h3 className="font-bold text-lg mb-2">Uzun Süreli Müdahale Desteği</h3>
               <p className="text-ink/80">
-                Her işe resmi fatura düzenlenir. İşçilikte 2 yıl, tesisat işlerinde
-                5 yıl garantisi sunuyoruz. Malzemelerin üretici garantısı da geçerlidir.
+                İşçiliğimizde 2 yıl, tesisat işlerinde 5 yıl boyunca bizim kaynaklı
+                her sorunda ücretsiz yeniden müdahale ederiz. Malzemelerde üretici desteği de geçerlidir.
               </p>
             </div>
           </div>
@@ -266,14 +266,14 @@ export default function Page() {
               <li className="text-ink/80 flex gap-2"><span className="text-accent font-bold">→</span>Hızlı ve güvenilir hizmet</li>
               <li className="text-ink/80 flex gap-2"><span className="text-accent font-bold">→</span>Adil ve şeffaf fiyatlandırma</li>
               <li className="text-ink/80 flex gap-2"><span className="text-accent font-bold">→</span>Profesyonel davranış</li>
-              <li className="text-ink/80 flex gap-2"><span className="text-accent font-bold">→</span>Uzun garantiler</li>
+              <li className="text-ink/80 flex gap-2"><span className="text-accent font-bold">→</span>Uzun süreli iş sonrası destek</li>
             </ul>
           </div>
           <div className="shadow-3d p-6 border border-line border-accent/30 bg-accent/5">
             <p className="text-lg font-bold mb-3 text-primary">İşin Sonunda Verdiğimiz</p>
             <ul className="space-y-2">
-              <li className="text-ink/80 flex gap-2"><span className="text-accent font-bold">→</span>Resmi fatura (KDV dahil)</li>
-              <li className="text-ink/80 flex gap-2"><span className="text-accent font-bold">→</span>İşçilik garantisi belgesi</li>
+              <li className="text-ink/80 flex gap-2"><span className="text-accent font-bold">→</span>Yazılı iş belgesi (KDV dahil)</li>
+              <li className="text-ink/80 flex gap-2"><span className="text-accent font-bold">→</span>İşçilik taahhüt belgesi</li>
               <li className="text-ink/80 flex gap-2"><span className="text-accent font-bold">→</span>Ölçüm raporları (tesisat işlerinde)</li>
               <li className="text-ink/80 flex gap-2"><span className="text-accent font-bold">→</span>Kullanım rehberi</li>
             </ul>

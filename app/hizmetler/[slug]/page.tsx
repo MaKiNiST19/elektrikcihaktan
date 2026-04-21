@@ -112,7 +112,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             <p className="font-bold text-primary">7/24</p>
           </div>
           <div className="shadow-3d bg-surface p-4">
-            <p className="text-xs uppercase text-ink/60">Garanti</p>
+            <p className="text-xs uppercase text-ink/60">Destek Süresi</p>
             <p className="font-bold text-primary text-sm">{h.warranty.split(",")[0]}</p>
           </div>
         </div>
@@ -175,9 +175,9 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             </ul>
           </div>
           <div className="shadow-3d bg-primary text-white p-5">
-            <h3 className="font-semibold mb-2">Garanti</h3>
+            <h3 className="font-semibold mb-2">İş Sonrası Destek</h3>
             <p className="text-sm">{h.warranty}</p>
-            <p className="text-sm mt-3 opacity-90">Tüm işlerde resmi fatura düzenlenir.</p>
+            <p className="text-sm mt-3 opacity-90">Sözleşmeli süre boyunca ücretsiz yeniden müdahale.</p>
           </div>
         </div>
 

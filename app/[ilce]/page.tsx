@@ -174,7 +174,7 @@ export default async function Page({ params }: { params: Promise<{ ilce: string 
                 <li className="flex gap-2"><span className="text-accent">✓</span>20+ yıllık deneyim ve uzmanlik</li>
                 <li className="flex gap-2"><span className="text-accent">✓</span>Belgeli, eğitimli teknisyenler</li>
                 <li className="flex gap-2"><span className="text-accent">✓</span>{i.responseTimeMinutes} dakikada hizmet</li>
-                <li className="flex gap-2"><span className="text-accent">✓</span>Tüm işlerde fatura ve garanti</li>
+                <li className="flex gap-2"><span className="text-accent">✓</span>Şeffaf fiyat, yazılı onay ile iş başlangıcı</li>
                 <li className="flex gap-2"><span className="text-accent">✓</span>7 gün 24 saat hizmet</li>
                 <li className="flex gap-2"><span className="text-accent">✓</span>Arıza tespiti ücretsiz</li>
               </ul>

@@ -23,7 +23,7 @@ export default function Page() {
       <PageEyebrow />
       <h1 className="text-4xl mb-3">Hizmetlerimiz</h1>
       <p className="text-ink/80 mb-10 max-w-2xl">
-        Konut ve iş yerleri için komple elektrik çözümleri. Hepsi belgeli ustalarımızla, faturalı ve garantili.
+        Konut ve iş yerleri için komple elektrik çözümleri. Hepsi belgeli ustalarımızla, şeffaf ve taahhütlü.
       </p>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {hizmetler.map((h) => (

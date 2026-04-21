@@ -36,7 +36,7 @@ const faq = [
     a: "Yanmış bir priz yangın başlatabilir. Hemen arayın, kullanmayın. Arkasındaki kablo da hasar görmüş olabilir, kontrol gerektirir.",
   },
   {
-    q: "Elektrik faturası neden yüksek geliyor?",
+    q: "Elektrik tüketimi neden yüksek geliyor?",
     a: "Kaçak elektrik, enerji saçan cihazlar veya başında hata olabilir. Tesisat kontrolü ve cihaz analizi yapabiliriz.",
   },
   {
@@ -80,8 +80,8 @@ const faq = [
     a: "Merkez ilçelerde ortalama 15 dakika, çevre ilçelerde 25-30 dakika. Yolda canlı konum paylaşımı sağlanır.",
   },
   {
-    q: "Fatura ve garanti veriyor musunuz?",
-    a: "Tüm işlerde resmi fatura keseriz. İşçilikte 2 yıl, tesisat işlerinde 5 yıl garanti veririz.",
+    q: "İşiniz sonrası destek sağlıyor musunuz?",
+    a: "Evet. İşçiliğimizde 2 yıl, tesisat işlerinde 5 yıl boyunca bizim kaynaklı her sorunda ücretsiz yeniden müdahale sözü veriyoruz.",
   },
   {
     q: "Elektrik fiyatları ne kadar?",
@@ -181,7 +181,7 @@ export default function Home() {
             <div className="grid sm:grid-cols-3 gap-3">
               <RatingBadge rating={5} title="20 Yıllık Deneyim" subtitle="Belgeli uzman ekip" />
               <RatingBadge rating={5} title="30 Dakikada Hizmet" subtitle="İzmir merkez bölgeleri" />
-              <RatingBadge rating={5} title="Garantili İşçilik" subtitle="Faturalı ve belgeli" />
+              <RatingBadge rating={5} title="Belgeli İşçilik" subtitle="Sertifikalı usta ekibi" />
             </div>
           </div>
         </div>
@@ -324,7 +324,7 @@ export default function Home() {
             </div>
             <div className="text-center shadow-3d bg-white/10 backdrop-blur-md border border-white/20 p-6">
               <p className="text-4xl md:text-5xl font-bold text-accent mb-2">5Yıl</p>
-              <p className="text-sm text-white/80 uppercase tracking-wide">Tesisat Garantisi</p>
+              <p className="text-sm text-white/80 uppercase tracking-wide">Tesisat Taahhüdü</p>
             </div>
           </div>
 
@@ -338,9 +338,9 @@ export default function Home() {
             </div>
             <div className="shadow-3d bg-white/5 border border-white/20 p-6">
               <div className="text-accent text-3xl mb-3">✓</div>
-              <h3 className="font-bold text-lg mb-2">Fatura + Garanti</h3>
+              <h3 className="font-bold text-lg mb-2">Uzun Süreli Destek</h3>
               <p className="text-sm text-white/80">
-                Her işte resmi fatura. İşçilikte 2 yıl, tesisat işlerinde 5 yıl garanti.
+                İşçilikte 2 yıl, tesisat işlerinde 5 yıl boyunca ücretsiz yeniden müdahale taahhüdü.
               </p>
             </div>
             <div className="shadow-3d bg-white/5 border border-white/20 p-6">
@@ -389,7 +389,7 @@ export default function Home() {
               <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded font-semibold">✓ TSE Yönetmeliği</span>
               <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded font-semibold">✓ Topraklama Belgeli</span>
               <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded font-semibold">✓ İSG Uyumlu</span>
-              <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded font-semibold">✓ Fatura Garanti</span>
+              <span className="text-xs bg-primary/10 text-primary px-3 py-1 rounded font-semibold">✓ Uzun Süreli Destek</span>
             </div>
           </div>
         </div>

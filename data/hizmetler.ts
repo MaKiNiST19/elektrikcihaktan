@@ -59,7 +59,7 @@ export const hizmetler: Hizmet[] = [
       "Kısa devre yapan devrelerin izole edilmesi",
       "Topraklama sürekliliğinin kontrolü",
       "Çalışan devreleri güvence altına alıp arızalıyı izole etme",
-      "Tüm onarımlara işçilik garantisi ve fatura",
+      "Tüm onarımlara yazılı işçilik taahhüdü",
     ],
     processSteps: [
       {
@@ -90,7 +90,7 @@ export const hizmetler: Hizmet[] = [
       "NYA/NYAF kablo (1.5mm², 2.5mm², 4mm²)",
       "Klemens, makaron, buat",
     ],
-    warranty: "Tüm işçilikte 2 yıl, kullanılan malzemede üretici garantisi.",
+    warranty: "Tüm işçilikte 2 yıl, kullanılan malzemede üretici desteği.",
     whenUrgent: [
       "Prizden duman veya yanık kokusu geldiğinde",
       "Duvarda cızırtı sesi duyulduğunda",
@@ -116,8 +116,8 @@ export const hizmetler: Hizmet[] = [
         a: "Konak, Bornova, Karşıyaka, Buca gibi merkez ilçelere ortalama 15 dakika; çevre ilçelere 25-30 dakika içinde ulaşıyoruz.",
       },
       {
-        q: "Fatura ve garanti veriyor musunuz?",
-        a: "Tüm işlere resmi fatura düzenleriz. İşçilikte 2 yıl, kullanılan malzemede ilgili üretici garantisi geçerlidir.",
+        q: "İş sonrası destek veriyor musunuz?",
+        a: "Her iş için yazılı belge düzenleriz. İşçilikte 2 yıl, kullanılan malzemede ilgili üretici desteği geçerlidir.",
       },
       {
         q: "Elektrik kesintisinin sebebi bende mi GDZ'de mi?",
@@ -125,7 +125,7 @@ export const hizmetler: Hizmet[] = [
       },
       {
         q: "Ödeme nasıl?",
-        a: "Nakit, kredi kartı, IBAN ve mobil ödeme kabul ediyoruz. Fatura iş bitmeden kesilir ve tarafınıza verilir.",
+        a: "Nakit, kredi kartı, IBAN ve mobil ödeme kabul ediyoruz. Ödeme belgesi iş bitmeden düzenlenir ve tarafınıza verilir.",
       },
     ],
     relatedServices: ["sigorta-pano", "kacak-akim-tespiti", "priz-anahtar"],
@@ -179,7 +179,7 @@ export const hizmetler: Hizmet[] = [
       "ABB / Schneider W-otomat ve kaçak akım rölesi",
       "Bakır topraklama iletkeni",
     ],
-    warranty: "Komple tesisatlarda 5 yıl işçilik garantisi, malzemede üretici garantisi.",
+    warranty: "Komple tesisatlarda 5 yıl işçilik taahhüdü, malzemede üretici desteği.",
     whenUrgent: [
       "Tadilatın sıva öncesi aşamasında (geç kalırsanız kırmak gerekir)",
       "Yeni beyaz eşya alacakken mutfakta priz yoksa",
@@ -257,7 +257,7 @@ export const hizmetler: Hizmet[] = [
       "Ana topraklama barası (MEB)",
       "30mA kaçak akım rölesi",
     ],
-    warranty: "Topraklama tesisinde 5 yıl, ölçüm raporu ise 1 yıl geçerlidir.",
+    warranty: "Topraklama tesisinde 5 yıl destek, ölçüm raporu ise 1 yıl geçerlidir.",
     whenUrgent: [
       "Hiç topraklama olmadığını öğrendiyseniz",
       "İş yeri denetimi yaklaşıyorsa",
@@ -319,7 +319,7 @@ export const hizmetler: Hizmet[] = [
       "Oda termostatı 2x0.5 ve 4x0.5 kablo çekimi",
       "Kaskad sistemler için 380V bağlantı",
       "Üretici servisiyle koordinasyonlu montaj",
-      "Çalışma testi ve garanti belgesi",
+      "Çalışma testi ve taahhüt belgesi",
     ],
     processSteps: [
       { step: "Kombi konumu kontrolü", detail: "Priz mesafesi, topraklama, sigorta kapasitesi değerlendirilir." },
@@ -334,7 +334,7 @@ export const hizmetler: Hizmet[] = [
       "16A W-otomat sigorta",
       "2x0.5 ve 4x0.5 zayıf akım kablosu",
     ],
-    warranty: "2 yıl işçilik garantisi.",
+    warranty: "2 yıl işçilik taahhüdü.",
     whenUrgent: [
       "Kış gelmeden kombi çalışması gerekiyorsa",
       "Mevcut priz kombi yükünü taşımıyorsa",
@@ -343,7 +343,7 @@ export const hizmetler: Hizmet[] = [
     faq: [
       {
         q: "Kombi için özel priz mi gerekiyor?",
-        a: "Evet. Topraklamalı, ayrı sigortalı ve 16A'lık bir priz gereklidir. Uzatma kablosu veya grup priz kullanılması hem üretici garantisini geçersiz kılar hem de yangın riski oluşturur.",
+        a: "Evet. Topraklamalı, ayrı sigortalı ve 16A'lık bir priz gereklidir. Uzatma kablosu veya grup priz kullanılması hem üretici desteğini geçersiz kılar hem de yangın riski oluşturur.",
       },
       {
         q: "Mevcut prizimi kullanabilir miyim?",
@@ -406,7 +406,7 @@ export const hizmetler: Hizmet[] = [
       "16A W-otomat sigorta",
       "Kablo kanalı (beyaz, 25x16)",
     ],
-    warranty: "2 yıl işçilik garantisi, elektrik tesisatında ömür boyu servis.",
+    warranty: "2 yıl işçilik taahhüdü, elektrik tesisatında ömür boyu servis.",
     whenUrgent: [
       "Yaz sıcakları başlamadan montaj yapılacaksa",
       "Klima çalışırken sigorta atıyorsa (yangın riski)",
@@ -478,7 +478,7 @@ export const hizmetler: Hizmet[] = [
       "Alçıpan ağır yük dübeli",
       "Tavan rozeti (ihtiyaca göre)",
     ],
-    warranty: "1 yıl işçilik garantisi.",
+    warranty: "1 yıl işçilik taahhüdü.",
     whenUrgent: [
       "Eve taşınıyorsunuz ve ışık yok",
       "Avize sallanıyor veya eğri duruyor",
@@ -514,7 +514,7 @@ export const hizmetler: Hizmet[] = [
     summary:
       "Duvar içindeki kaçakları kesme ve kırma olmadan, profesyonel cihazlarla tespit ediyoruz.",
     longDescription:
-      "Kaçak akım, tesisatın bir noktasındaki yalıtım bozukluğundan dolayı elektriğin toprağa veya başka bir iletkene akmasıdır. Belirtiler: sürekli atan kaçak akım rölesi, metal cihazlara dokununca karıncalanma, sebepsiz artan elektrik faturası. Tahmin ederek duvar kırmak yanlıştır — biz termal kamera ve yalıtım direnci ölçüm cihazıyla arızayı lokalize ederiz. Çoğu zaman tek bir priz, bir buat veya nemli bir kablo bölümüdür; müdahale milimetrik yapılır.",
+      "Kaçak akım, tesisatın bir noktasındaki yalıtım bozukluğundan dolayı elektriğin toprağa veya başka bir iletkene akmasıdır. Belirtiler: sürekli atan kaçak akım rölesi, metal cihazlara dokununca karıncalanma, sebepsiz artan elektrik tüketimi. Tahmin ederek duvar kırmak yanlıştır — biz termal kamera ve yalıtım direnci ölçüm cihazıyla arızayı lokalize ederiz. Çoğu zaman tek bir priz, bir buat veya nemli bir kablo bölümüdür; müdahale milimetrik yapılır.",
     icon: "leak",
     priceRange: "₺600-₺1800",
     durationMinutes: 90,
@@ -525,7 +525,7 @@ export const hizmetler: Hizmet[] = [
     symptoms: [
       "Kaçak akım rölesi sürekli atıyor",
       "Metal cihaza dokununca karıncalanma hissediyorsunuz",
-      "Elektrik faturası sebepsiz yüksek geliyor",
+      "Elektrik tüketimi sebepsiz yüksek geliyor",
       "Bir odada lamba hafif parlıyor (hayalet voltaj)",
       "Yağmurlu günlerde sigorta atıyor",
     ],
@@ -570,7 +570,7 @@ export const hizmetler: Hizmet[] = [
         a: "Çoğu durumda evet. Termal kamera ve yalıtım ölçümüyle hassas lokalizasyon yapıyoruz. Sadece onarım yapılacak küçük bir alan açılır.",
       },
       {
-        q: "Kaçak akım elektrik faturasını etkiler mi?",
+        q: "Kaçak akım elektrik tüketimini etkiler mi?",
         a: "Evet. Gizli bir kaçak saatte 100-500W'a varan boşa tüketim yapabilir — bu da ayda 200-600 TL'lik fark demektir.",
       },
       {
@@ -627,7 +627,7 @@ export const hizmetler: Hizmet[] = [
       "Topraklama ve nötr barası",
       "Etiketli klemensler",
     ],
-    warranty: "5 yıl işçilik garantisi, malzemede üretici garantisi (ABB/Schneider 3 yıl).",
+    warranty: "5 yıl işçilik taahhüdü, malzemede üretici desteği (ABB/Schneider 3 yıl).",
     whenUrgent: [
       "Pano kokusu, yanık izi veya ısınma varsa",
       "Kaçak akım rölesi yoksa (güvenlik şartı)",
@@ -702,7 +702,7 @@ export const hizmetler: Hizmet[] = [
       "Çocuk korumalı priz",
       "Buat, klemens, makaron",
     ],
-    warranty: "1 yıl işçilik + malzeme garantisi.",
+    warranty: "1 yıl işçilik + malzeme desteği.",
     whenUrgent: [
       "Priz yandı, yanık kokusu var",
       "Priz cihaza takılınca kıvılcım atıyor",
@@ -774,7 +774,7 @@ export const hizmetler: Hizmet[] = [
       "CAT6 ethernet kablo",
       "Mesh Wi-Fi noktaları (TP-Link Deco, Asus Zen)",
     ],
-    warranty: "1 yıl işçilik; hava koşullarıyla kayma halinde ücretsiz yeniden ayar (ilk 6 ay).",
+    warranty: "1 yıl işçilik desteği; hava koşullarıyla kayma halinde ücretsiz yeniden ayar (ilk 6 ay).",
     whenUrgent: [
       "Maç başlamadan tv çalışsın isteniyor",
       "Rüzgârdan anten kaydı",

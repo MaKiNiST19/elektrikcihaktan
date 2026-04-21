@@ -1,6 +1,7 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/lib/site";
+import { MobileMenu } from "@/components/MobileMenu";
 
 const navLinks = [
   { href: "/", label: "Anasayfa" },
@@ -13,7 +14,7 @@ const navLinks = [
 
 export function Header() {
   return (
-    <header className="border-b border-line">
+    <header className="sticky top-0 z-40 bg-white border-b border-line">
       <div className="bg-primary text-white text-sm">
         <div className="container-x py-2 flex items-center justify-between">
           <span className="hidden md:inline text-white/80">
@@ -27,15 +28,15 @@ export function Header() {
           </a>
         </div>
       </div>
-      <div className="container-x flex items-center justify-between py-4">
+      <div className="container-x flex items-center justify-between py-2">
         <Link href="/" className="flex items-center gap-3" aria-label={site.name}>
           <Image
             src="/logo.png"
             alt={site.name}
-            width={180}
-            height={40}
+            width={252}
+            height={56}
             priority
-            className="h-10 w-auto"
+            className="h-14 w-auto"
           />
         </Link>
         <nav aria-label="Ana menü" className="hidden lg:block">
@@ -49,21 +50,13 @@ export function Header() {
             ))}
           </ul>
         </nav>
-        <a href={`tel:${site.phoneTel}`} className="btn-accent hidden md:inline-flex">
-          Tamirci Çağır
-        </a>
+        <div className="flex items-center gap-3">
+          <a href={`tel:${site.phoneTel}`} className="btn-accent hidden md:inline-flex">
+            Tamirci Çağır
+          </a>
+          <MobileMenu links={navLinks} />
+        </div>
       </div>
-      <nav aria-label="Mobil menü" className="lg:hidden border-t border-line">
-        <ul className="container-x flex items-center gap-4 overflow-x-auto py-2 text-xs font-semibold uppercase">
-          {navLinks.map((l) => (
-            <li key={l.href} className="whitespace-nowrap">
-              <Link href={l.href} className="text-primary hover:text-accent">
-                {l.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
     </header>
   );
 }

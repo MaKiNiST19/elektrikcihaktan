@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 const extendedFaq = [
   {
     q: "İzmir'de 7/24 elektrikçi hangi saatlerde ek ücret alır?",
-    a: "Bizde gece, hafta sonu ve resmi tatil farkı yoktur. Saat 03:00'te Buca'dan gelen çağrı ile öğlen 12:00'de Konak'tan gelen çağrı aynı işçilik ücretiyle faturalandırılır. Yol ücreti İzmir merkez ilçelerinde alınmaz.",
+    a: "Bizde gece, hafta sonu ve resmi tatil farkı yoktur. Saat 03:00'te Buca'dan gelen çağrı ile öğlen 12:00'de Konak'tan gelen çağrı aynı işçilik ücretiyle değerlendirilir. Yol ücreti İzmir merkez ilçelerinde alınmaz.",
   },
   {
     q: "Elektrikçi çağırmadan önce kendim nelere bakabilirim?",
@@ -15,15 +15,15 @@ const extendedFaq = [
   },
   {
     q: "Ücretsiz keşif gerçekten ücretsiz mi, sonradan ek fiyat çıkıyor mu?",
-    a: "Yerinde keşif tamamen ücretsizdir ve keşif sonrası size yazılı sabit fiyat verilir. Onay vermeden tek bir kablo bile kesilmez. İş bitimi öncesi onaylanmamış kalem faturaya eklenmez — bu yazılı garantimizdir.",
+    a: "Yerinde keşif tamamen ücretsizdir ve keşif sonrası size yazılı sabit fiyat verilir. Onay vermeden tek bir kablo bile kesilmez. İş bitimi öncesi onaylanmamış kalem toplam tutara eklenmez — bu yazılı taahhüdümüzdür.",
   },
   {
     q: "Kiracıyım, elektrik tesisatını yenilettirirsem ev sahibine sormalı mıyım?",
     a: "Sabit tesisat (duvar içi kablolama, pano, topraklama) mülk sahibine ait olduğu için yenileme öncesi yazılı onay almanız gerekir. Priz, anahtar, avize, armatür gibi taşınabilir/sökülebilir kalemlerde genellikle onay gerekmez. Kiracının yaptırdığı bedelin ne kadarının kiradan düşüleceği ya da tahliyede geri alınıp alınmayacağı kira sözleşmenize bağlıdır.",
   },
   {
-    q: "Fatura elektronik mi kesiliyor, kurumsal ödeme yapılıyor mu?",
-    a: "Evet, e-Arşiv/e-Fatura sistemine kayıtlıyız. Kurumsal müşterilere firma adına fatura keseriz, kredi kartı ve banka havalesi kabul ederiz. Apartman yönetimlerine, site yönetimlerine ve işletmelere aylık toplu fatura da düzenliyoruz.",
+    q: "Kurumsal ödeme kabul ediyor musunuz?",
+    a: "Evet, e-Arşiv sistemine kayıtlıyız. Kurumsal müşterilere firma adına belge düzenleriz, kredi kartı ve banka havalesi kabul ederiz. Apartman yönetimlerine, site yönetimlerine ve işletmelere aylık toplu ödeme planı da sunuyoruz.",
   },
   {
     q: "Eski binada priz topraklamasız — sadece toprak hattı çekilebilir mi?",
@@ -42,12 +42,12 @@ const extendedFaq = [
     a: "İzmir'de en sık karşılaştığımız neden: aşırı yüklenen çoklu prizler (özellikle ısıtıcı, kettle, çamaşır makinesi gibi yüksek amperli cihazların aynı çoklu prizden beslenmesi), ek yerlerinde gevşemiş klemens bağlantıları ve yaşlanmış alüminyum kablolar. Bu üçü toplam yangın çağrılarımızın %80'inden fazlasını oluşturuyor.",
   },
   {
-    q: "İşçilik garantisi tam olarak neyi kapsıyor?",
-    a: "Yaptığımız tüm onarım ve montajlarda işçilik garantisi 2 yıldır; yani bağlantı gevşemesi, yanlış klemenslenme, kablo sıyırma hatası gibi bizim kaynaklı bir sorun çıkarsa ücretsiz gelir ve düzeltiriz. Malzeme garantisi üretici markaya göre değişir (Viko, Schneider, ABB, Siemens gibi markalarda 2-5 yıl). Müşterinin kendi aldığı malzemede sadece işçilik garantisi geçerlidir.",
+    q: "İş sonrası desteğiniz tam olarak neyi kapsıyor?",
+    a: "Yaptığımız tüm onarım ve montajlarda işçilik taahhüdümüz 2 yıldır; yani bağlantı gevşemesi, yanlış klemenslenme, kablo sıyırma hatası gibi bizim kaynaklı bir sorun çıkarsa ücretsiz gelir ve düzeltiriz. Malzeme desteği üretici markaya göre değişir (Viko, Schneider, ABB, Siemens gibi markalarda 2-5 yıl). Müşterinin kendi aldığı malzemede sadece işçilik taahhüdü geçerlidir.",
   },
   {
     q: "Apartman yönetimleri için toplu bakım anlaşması yapıyor musunuz?",
-    a: "Evet. Sitenin ortak alan aydınlatması, hidrofor panosu, asansör elektriği, otopark sensörleri, kamera ve interkom altyapısı için aylık bakım anlaşmaları düzenliyoruz. Anlaşmalı sitelerde çağrı başına fatura yerine sabit aylık ücret uygular, acil çağrılarda önceliklendirme yaparız.",
+    a: "Evet. Sitenin ortak alan aydınlatması, hidrofor panosu, asansör elektriği, otopark sensörleri, kamera ve interkom altyapısı için aylık bakım anlaşmaları düzenliyoruz. Anlaşmalı sitelerde çağrı başına ücret yerine sabit aylık tarife uygular, acil çağrılarda önceliklendirme yaparız.",
   },
   {
     q: "Bir elektrikçinin 'ustalık belgesi' olup olmadığını nasıl anlarım?",
@@ -184,7 +184,7 @@ export function HomeSeoBlock() {
                 <strong>işyeri açma ruhsatı / vergi levhası</strong> (kayıt dışı çalışan
                 ustaların sigorta açısından koruyamayacağı kazalar oluyor),{" "}
                 <strong>yazılı sabit fiyat teklifi</strong> (saat başı "değişir" diyen
-                fiyatlandırmadan kaçının) ve <strong>işçilik garantisi taahhüdü</strong>.
+                fiyatlandırmadan kaçının) ve <strong>iş sonrası destek taahhüdü</strong>.
                 Bu dört madde, ucuz görünen işlerin arkasında oluşan gizli maliyeti en
                 büyük oranda düşüren filtredir.
               </p>
@@ -431,7 +431,7 @@ export function HomeSeoBlock() {
               <h3 className="text-2xl text-primary mb-3">Kombi, Klima, Avize Montajı — Elektrik Tarafı</h3>
               <p>
                 Mekanik montaj ustası çok olsa da bu cihazların elektrik altyapısı
-                ihmal edildiğinde cihaz garantisi bile tehlikeye girer. Klima için 2.5
+                ihmal edildiğinde cihaz üretici desteği bile tehlikeye girer. Klima için 2.5
                 mm² kesitli özel hat, kombi için topraklı tekli priz, avize için
                 doğru anma akımına sahip anahtarlama zorunludur. Bu hatlardan birini
                 atlayan montajlar İzmir'de yaz ortası en sık karşılaştığımız yangın
@@ -560,9 +560,9 @@ export function HomeSeoBlock() {
                 </li>
                 <li><strong>Belgeli usta kadrosu</strong> — MYK ve MEB onaylı ustalık belgeleri.</li>
                 <li><strong>Şeffaf fiyat</strong> — yerinde yazılı teklif, onaysız kalem yok.</li>
-                <li><strong>2 yıl işçilik garantisi</strong> — bağlantı kaynaklı her sorunda ücretsiz yeniden müdahale.</li>
+                <li><strong>2 yıl işçilik taahhüdü</strong> — bağlantı kaynaklı her sorunda ücretsiz yeniden müdahale.</li>
                 <li><strong>Gerçek 7/24</strong> — gece, hafta sonu, bayram ek ücret yok.</li>
-                <li><strong>Kurumsal faturalandırma</strong> — e-Arşiv/e-Fatura, apartman/işletme anlaşmaları.</li>
+                <li><strong>Kurumsal ödeme</strong> — e-Arşiv, apartman/işletme anlaşmaları.</li>
                 <li>
                   <strong>Hakkımızda</strong> hikayemizin tamamı için{" "}
                   <Link href="/hakkimizda" className="text-accent underline">
@@ -600,14 +600,14 @@ export function HomeSeoBlock() {
             </section>
 
             <section>
-              <h3 className="text-2xl text-primary mb-3">Müşteri Deneyimimiz: Randevudan Faturaya</h3>
+              <h3 className="text-2xl text-primary mb-3">Müşteri Deneyimimiz: Randevudan İş Teslimine</h3>
               <p>
                 Bir çağrı aldığımızda süreç standart akar: telefonda durumu
                 anlatırsınız, olası senaryoları söyler ve yaklaşık fiyat aralığı
                 veririz. Yola çıktığımızda canlı konum paylaşımı yaparız — bekleme
                 belirsizliği yok. Eve vardığımızda koruyucu terlik/galoş kullanır,
                 mümkün olan en az müdahaleyi yapar, işi bitirdiğimizde çalıştığımız
-                alanı temizler, fotoğraf ile öncesi-sonrası belgesi bırakırız. Fatura
+                alanı temizler, fotoğraf ile öncesi-sonrası belgesi bırakırız. Ödeme belgesi
                 aynı gün e-Arşiv'den e-posta veya WhatsApp yoluyla ulaşır.
               </p>
               <p className="mt-3">
@@ -638,7 +638,7 @@ export function HomeSeoBlock() {
               <p className="text-white/80 mb-5 max-w-2xl mx-auto">
                 İzmir'in hangi ilçesindeyseniz olun — Buca'dan Konak'a, Bornova'dan
                 Karabağlar'a — ortalama 15-25 dakikada kapıdayız. Keşif ücretsiz,
-                teklif yazılı, iş garantili.
+                teklif yazılı, iş taahhütlü.
               </p>
               <a href={`tel:${site.phoneTel}`} className="btn-accent text-2xl px-8 py-4">
                 📞 {site.phone}

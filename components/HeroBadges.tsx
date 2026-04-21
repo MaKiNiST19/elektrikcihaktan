@@ -6,7 +6,7 @@ import { LeafBadge } from "./LeafBadge";
 const items = [
   "20 Yıllık Deneyim",
   "30 Dakikada Hizmet",
-  "Garantili İşçilik",
+  "Belgeli İşçilik",
 ];
 
 export function HeroBadges() {

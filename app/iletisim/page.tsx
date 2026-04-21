@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
+import { PageEyebrow } from "@/components/PageEyebrow";
 
 export const metadata: Metadata = {
   title: "İletişim — 7/24 Acil Elektrikçi Hattı",
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <section className="container-x py-16 max-w-3xl">
+      <PageEyebrow />
       <h1 className="text-4xl mb-6">İletişim</h1>
       <div className="grid gap-4 md:grid-cols-2">
         <a href={`tel:${site.phoneTel}`} className="block bg-primary text-white p-8 hover:bg-accent transition-colors">

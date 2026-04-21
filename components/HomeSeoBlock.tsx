@@ -116,10 +116,10 @@ export function HomeSeoBlock() {
     "@type": "Article",
     headline: "İzmir Elektrikçi Rehberi — Arıza Tespitinden Tesisat Yenilemeye",
     description:
-      "İzmir'de 20+ yıldır elektrik işleri yapan Usta Haktan'ın kaleminden sahada en sık karşılaştığımız arızalar, güvenlik ipuçları ve fiyat rehberi.",
+      "İzmir'de 20+ yıldır elektrik işleri yapan Elektrikçi Volkan Haktan'ın kaleminden sahada en sık karşılaştığımız arızalar, güvenlik ipuçları ve fiyat rehberi.",
     author: {
       "@type": "Person",
-      name: "Usta Haktan",
+      name: "Elektrikçi Volkan Haktan",
       jobTitle: "Elektrik Teknisyeni",
       worksFor: { "@type": "LocalBusiness", name: site.name },
     },
@@ -149,7 +149,7 @@ export function HomeSeoBlock() {
               İzmir'de 7/24 Elektrikçi: Arıza Tespitinden Tesisat Yenilemeye Tam Rehber
             </h2>
             <p className="text-ink/70 text-sm">
-              Yazan: <strong className="text-primary">Usta Haktan</strong> · İzmir'de{" "}
+              Yazan: <strong className="text-primary">Elektrikçi Volkan Haktan</strong> · İzmir'de{" "}
               {new Date().getFullYear() - site.foundingYear} yıllık sahada uygulama tecrübesi · Son
               güncelleme: {new Date().toISOString().slice(0, 10)}
             </p>
@@ -640,7 +640,7 @@ export function HomeSeoBlock() {
                 Karabağlar'a — ortalama 15-25 dakikada kapıdayız. Keşif ücretsiz,
                 teklif yazılı, iş garantili.
               </p>
-              <a href={`tel:${site.phoneTel}`} className="inline-block bg-accent text-white font-bold text-2xl px-8 py-4 hover:bg-white hover:text-accent transition-colors">
+              <a href={`tel:${site.phoneTel}`} className="btn-accent text-2xl px-8 py-4">
                 📞 {site.phone}
               </a>
             </section>

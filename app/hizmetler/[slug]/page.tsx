@@ -6,6 +6,7 @@ import { ilceler } from "@/data/ilceler";
 import { site } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd";
 import { AuthorByline } from "@/components/Author";
+import { PageEyebrow } from "@/components/PageEyebrow";
 
 export function generateStaticParams() {
   return hizmetler.map((h) => ({ slug: h.slug }));
@@ -93,7 +94,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           <span>{h.shortTitle}</span>
         </nav>
 
-        <h1 className="text-4xl mb-4">{h.title}</h1>
+        <PageEyebrow />n        <h1 className="text-4xl mb-4">{h.title}</h1>
         <p className="text-lg text-ink/80 leading-relaxed">{h.summary}</p>
 
         <div className="grid sm:grid-cols-4 gap-3 my-8">
@@ -193,7 +194,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
         <div className="mt-10 bg-accent text-white p-8 text-center">
           <p className="mb-3 text-lg">{h.shortTitle} için hemen randevu alın</p>
-          <a href={`tel:${site.phoneTel}`} className="inline-block bg-white text-accent font-bold text-2xl px-8 py-4 hover:bg-primary hover:text-white transition-colors">
+          <a href={`tel:${site.phoneTel}`} className="btn-phone-lg">
             📞 {site.phone}
           </a>
         </div>

@@ -53,7 +53,7 @@ export default function Home() {
       <section className="bg-primary text-white">
         <div className="container-x py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <p className="text-accent font-semibold mb-3 uppercase tracking-wider text-sm">
+            <p className="text-shine font-semibold mb-3 uppercase tracking-wider text-sm">
               20+ Yıl Tecrübe · İzmir'in Tamamı
             </p>
             <h1 className="text-4xl md:text-5xl text-white leading-tight mb-4">
@@ -71,7 +71,7 @@ export default function Home() {
                 href={`https://wa.me/${site.whatsapp}`}
                 target="_blank"
                 rel="noopener"
-                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 transition-colors"
+                className="btn-whatsapp"
               >
                 💬 WhatsApp
               </a>
@@ -91,7 +91,7 @@ export default function Home() {
             </p>
             <a
               href={`tel:${site.phoneTel}`}
-              className="block bg-white text-accent text-center text-2xl md:text-3xl font-bold py-4 hover:bg-primary hover:text-white transition-colors"
+              className="btn-phone-lg w-full text-center"
             >
               {site.phone}
             </a>

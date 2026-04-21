@@ -6,6 +6,7 @@ import { hizmetler, getHizmet } from "@/data/hizmetler";
 import { site } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd";
 import { AuthorByline } from "@/components/Author";
+import { PageEyebrow } from "@/components/PageEyebrow";
 
 export function generateStaticParams() {
   return ilceler.flatMap((i) =>
@@ -89,7 +90,7 @@ export default async function Page({
           <span>{h.shortTitle}</span>
         </nav>
 
-        <h1 className="text-4xl mb-4">
+        <PageEyebrow />n        <h1 className="text-4xl mb-4">
           {i.name} {h.title}
         </h1>
         <p className="text-lg text-ink/80 leading-relaxed">
@@ -103,7 +104,7 @@ export default async function Page({
               {i.name}'da {i.responseTimeMinutes} dakikada yerinizde
             </p>
           </div>
-          <a href={`tel:${site.phoneTel}`} className="bg-white text-accent font-bold px-6 py-3 hover:bg-primary hover:text-white transition-colors">
+          <a href={`tel:${site.phoneTel}`} className="btn-phone px-6 py-3 text-base">
             {site.phone}
           </a>
         </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PageEyebrow } from "@/components/PageEyebrow";
 
 export const metadata: Metadata = {
   title: "Blog — Elektrik Rehberleri",
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <section className="container-x py-16 max-w-3xl">
+      <PageEyebrow />
       <h1 className="text-4xl mb-4">Blog</h1>
       <p className="text-ink/80">
         Yakında: "Elektrik kaçağı nasıl bulunur", "Sigorta neden atar", "Kombi

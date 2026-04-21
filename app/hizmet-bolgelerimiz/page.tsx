@@ -1,6 +1,7 @@
 ﻿import Link from "next/link";
 import type { Metadata } from "next";
 import { ilceler } from "@/data/ilceler";
+import { PageEyebrow } from "@/components/PageEyebrow";
 
 export const metadata: Metadata = {
   title: "Hizmet Bölgelerimiz — İzmir'in Tüm İlçeleri",
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <section className="container-x py-16">
+      <PageEyebrow />
       <h1 className="text-4xl mb-3">Hizmet Bölgelerimiz</h1>
       <p className="text-ink/80 mb-10 max-w-2xl">
         İzmir'in tüm ilçe ve mahallelerinde 7/24 elektrikçi hizmeti. Listeden

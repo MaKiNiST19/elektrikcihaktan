@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
+import { PageEyebrow } from "@/components/PageEyebrow";
 
 export const metadata: Metadata = {
   title: "Hakkımızda — Elektrikçi Haktan",
@@ -11,11 +12,12 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <article className="container-x py-16 max-w-3xl prose-like">
+      <PageEyebrow />
       <h1 className="text-4xl mb-4">Hakkımızda</h1>
       <p className="text-lg text-ink/80 leading-relaxed">
         2005'ten bu yana İzmir'in dört bir yanında elektrik tamiratı, tesisat ve
-        montaj hizmeti veriyoruz. Ustabaşı Haktan önderliğinde, yalnızca lisanslı
-        elektrik teknisyenleriyle çalışıyoruz.
+        montaj hizmeti veriyoruz. Elektrikçi Volkan Haktan önderliğinde, yalnızca
+        belgeli elektrik teknisyenleriyle çalışıyoruz.
       </p>
       <h2 className="text-2xl mt-10 mb-3">Neden Biz?</h2>
       <ul className="list-disc pl-6 space-y-2 text-ink/80">

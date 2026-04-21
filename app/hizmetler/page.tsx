@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { hizmetler } from "@/data/hizmetler";
+import { PageEyebrow } from "@/components/PageEyebrow";
 
 export const metadata: Metadata = {
   title: "Hizmetlerimiz — Tüm Elektrik İşleri",
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <section className="container-x py-16">
+      <PageEyebrow />
       <h1 className="text-4xl mb-3">Hizmetlerimiz</h1>
       <p className="text-ink/80 mb-10 max-w-2xl">
         Konut ve iş yerleri için komple elektrik çözümleri. Hepsi belgeli ustalarımızla, faturalı ve garantili.

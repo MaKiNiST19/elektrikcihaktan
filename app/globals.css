@@ -17,12 +17,63 @@
   }
 }
 
+@layer utilities {
+  .text-shine {
+    background: linear-gradient(to right, #9f9f9f 0, #fff 10%, #868686 20%);
+    background-size: 200% auto;
+    background-position: 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: text-shine 3s infinite linear;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes text-shine {
+  0%   { background-position: 0; }
+  60%  { background-position: 180px; }
+  100% { background-position: 180px; }
+}
+
 @layer components {
+  .btn-shimmer {
+    @apply relative inline-flex items-center justify-center gap-2 overflow-hidden border border-white/20 font-semibold transition-all duration-300 ease-in-out hover:scale-[1.04] hover:shadow-xl;
+  }
+  .btn-shimmer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(-13deg) translateX(-140%);
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.35) 50%, transparent 100%);
+    pointer-events: none;
+    transition: transform 1000ms ease;
+  }
+  .btn-shimmer:hover::after {
+    transform: skew(-13deg) translateX(140%);
+  }
+
   .btn-accent {
-    @apply inline-flex items-center justify-center gap-2 bg-accent text-white font-semibold px-6 py-3 hover:bg-accent-600 transition-colors;
+    @apply btn-shimmer bg-accent text-white px-6 py-3 hover:bg-accent-600 hover:shadow-accent/50;
+  }
+  .btn-primary {
+    @apply btn-shimmer bg-primary text-white px-6 py-3 hover:bg-primary-700 hover:shadow-primary/50;
   }
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 border border-primary text-primary font-semibold px-6 py-3 hover:bg-primary hover:text-white transition-colors;
+    @apply btn-shimmer border border-primary text-primary px-6 py-3 hover:bg-primary hover:text-white hover:shadow-primary/50;
+  }
+  .btn-phone {
+    @apply btn-shimmer bg-white text-accent px-8 py-4 font-bold hover:bg-primary hover:text-white hover:shadow-primary/40;
+  }
+  .btn-phone-lg {
+    @apply btn-phone text-2xl md:text-3xl;
+  }
+  .btn-whatsapp {
+    @apply btn-shimmer bg-green-600 text-white px-6 py-3 hover:bg-green-700 hover:shadow-green-600/50;
   }
   .container-x {
     @apply max-w-6xl mx-auto px-4 md:px-6;

@@ -1,7 +1,7 @@
 export const site = {
   name: "Elektrikçi Haktan",
   legalName: "Elektrikçi Haktan",
-  url: "https://elektrikcihaktan.com",
+  url: "https://www.elektrikcihaktan.com",
   locale: "tr_TR",
   phone: "+90 531 406 53 53",
   phoneDigits: "05314065353",

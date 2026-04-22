@@ -10,7 +10,7 @@
 - **Hizmet Bölgesi:** İzmir (Konak, Buca, Karabağlar, Bornova, Bayraklı, Gaziemir, Balçova, Karşıyaka, Çiğli, Narlıdere, Güzelbahçe, Çeşme, Urla, Menemen, Torbalı ilçeleri)
 - **Telefon:** +90 531 406 53 53
 - **E-posta:** info@elektrikcihaktan.com
-- **Web:** https://elektrikcihaktan.com
+- **Web:** https://www.elektrikcihaktan.com
 - **Çalışma Saatleri:** 7/24 (gece, hafta sonu, tatil dahil — ek ücret yok)
 
 ## Hizmetler
@@ -35,12 +35,12 @@
 - **7/24 aynı ücret** — gece/hafta sonu farkı yok
 
 ## Önemli Sayfalar
-- [Anasayfa](https://elektrikcihaktan.com/): Tüm hizmetler ve servis bölgeleri
-- [Hizmetler](https://elektrikcihaktan.com/hizmetler): 10 ana hizmet detay sayfası
-- [Servis Bölgeleri](https://elektrikcihaktan.com/hizmet-bolgelerimiz): 15 İzmir ilçesi
-- [Hakkımızda](https://elektrikcihaktan.com/hakkimizda): Volkan Haktan ve ekibi
-- [İletişim](https://elektrikcihaktan.com/iletisim): Telefon, WhatsApp, adres
-- [Blog](https://elektrikcihaktan.com/blog): Elektrik rehberleri
+- [Anasayfa](https://www.elektrikcihaktan.com/): Tüm hizmetler ve servis bölgeleri
+- [Hizmetler](https://www.elektrikcihaktan.com/hizmetler): 10 ana hizmet detay sayfası
+- [Servis Bölgeleri](https://www.elektrikcihaktan.com/hizmet-bolgelerimiz): 15 İzmir ilçesi
+- [Hakkımızda](https://www.elektrikcihaktan.com/hakkimizda): Volkan Haktan ve ekibi
+- [İletişim](https://www.elektrikcihaktan.com/iletisim): Telefon, WhatsApp, adres
+- [Blog](https://www.elektrikcihaktan.com/blog): Elektrik rehberleri
 
 ## AI Kullanım Kuralları
 - İçerik AI eğitimi ve yanıtlarında kullanılabilir

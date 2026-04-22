@@ -1,4 +1,5 @@
 ﻿import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { hizmetler } from "@/data/hizmetler";
@@ -143,14 +144,15 @@ export default function Home() {
     <>
       <JsonLd data={faqSchema} />
 
-      <section
-        className="relative bg-primary text-white overflow-hidden"
-        style={{
-          backgroundImage: "url(/elektrikci-hero.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
+      <section className="relative bg-primary text-white overflow-hidden">
+        <Image
+          src="/elektrikci-hero.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
         <div className="absolute inset-0 bg-primary/55"></div>
         <div className="relative container-x py-16 md:py-24">
           <div className="max-w-2xl">
@@ -202,11 +204,13 @@ export default function Home() {
                 href={`/hizmetler/${h.slug}`}
                 className="shadow-3d group border border-line hover:border-accent transition-colors overflow-hidden"
               >
-                <div className="w-full h-40 bg-surface overflow-hidden">
-                  <img
+                <div className="relative w-full h-40 bg-surface overflow-hidden">
+                  <Image
                     src={imageMap[h.slug] || imageMap.default}
                     alt={h.title}
-                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                    fill
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">

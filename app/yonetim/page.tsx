@@ -157,7 +157,23 @@ export default async function YonetimPage({
     );
   }
 
-  const { summary, devices, cities, suspicious } = await getData();
+  let data;
+  try {
+    data = await getData();
+  } catch (err) {
+    return (
+      <div style={{ minHeight: "100vh", background: "#010409", color: "#fff", padding: 40, fontFamily: "monospace" }}>
+        <h1 style={{ color: "#f85149" }}>DB Hatası</h1>
+        <pre style={{ background: "#0d1117", padding: 16, borderRadius: 8, border: "1px solid #30363d", whiteSpace: "pre-wrap", fontSize: 12 }}>
+          {err instanceof Error ? err.message + "\n\n" + (err.stack ?? "") : String(err)}
+        </pre>
+        <form action={logout} style={{ marginTop: 16 }}>
+          <button type="submit" style={{ background: "#21262d", color: "#e6edf3", border: "1px solid #30363d", padding: "8px 14px", borderRadius: 6 }}>Çıkış</button>
+        </form>
+      </div>
+    );
+  }
+  const { summary, devices, cities, suspicious } = data;
   const izmirAdsOrani = Number(summary.ads) > 0 ? Math.round((Number(summary.izmir_ads) / Number(summary.ads)) * 100) : 0;
 
   return (

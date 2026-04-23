@@ -5,12 +5,20 @@ declare global {
   var __pgPool: Pool | undefined;
 }
 
-export const pool =
-  global.__pgPool ??
-  new Pool({
-    connectionString: process.env.DATABASE_URL,
-    max: 5,
+function createPool() {
+  const connectionString = process.env.DATABASE_URL;
+  if (!connectionString) {
+    throw new Error("DATABASE_URL environment variable is not set");
+  }
+  return new Pool({
+    connectionString,
+    ssl: { rejectUnauthorized: false },
+    max: 3,
     idleTimeoutMillis: 30_000,
+    connectionTimeoutMillis: 10_000,
   });
+}
+
+export const pool = global.__pgPool ?? createPool();
 
 if (process.env.NODE_ENV !== "production") global.__pgPool = pool;

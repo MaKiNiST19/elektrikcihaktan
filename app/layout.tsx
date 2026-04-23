@@ -8,6 +8,7 @@ import { StickyCall } from "@/components/StickyCall";
 import { GoogleTagManager, GoogleTagManagerNoScript } from "@/components/GoogleTagManager";
 import { ConsentBanner } from "@/components/ConsentBanner";
 import { JsonLd, localBusinessSchema, organizationSchema, websiteSchema, personSchema } from "@/components/JsonLd";
+import { VisitTracker } from "@/components/VisitTracker";
 
 const montserrat = Montserrat({
   subsets: ["latin", "latin-ext"],
@@ -100,6 +101,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <StickyCall />
         <ConsentBanner />
+        <VisitTracker />
       </body>
     </html>
   );

@@ -15,7 +15,7 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
   display: "swap",
 });
-
+//dev build
 const dosis = Dosis({
   subsets: ["latin", "latin-ext"],
   variable: "--font-dosis",
